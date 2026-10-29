@@ -1,0 +1,3870 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>مدرسة الثروات الوطنية الخاصة | Al Tharawat National Private School – TNS</title>
+  <meta name="description" content="البوابة الرسمية لمدرسة الثروات الوطنية الخاصة بأبوظبي - منهاج وزاري وطني رائد من الروضة وحتى الثاني عشر متقدم." />
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ==========================================================================
+       متغيرات التصميم والتجاوب 100% (CSS VARIABLES)
+       ========================================================================== */
+    :root {
+      --primary: #0a2240;
+      --primary-hover: #12345e;
+      --secondary: #c5a059;
+      --secondary-hover: #ad8a45;
+      --accent: #028653;
+      --danger: #dc2626;
+      --warning: #f59e0b;
+      --info: #0284c7;
+
+      --bg-body: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-alt: #f1f5f9;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 6px 16px rgba(10,34,64,0.08);
+      --shadow-lg: 0 14px 32px rgba(10,34,64,0.14);
+
+      --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --header-h: 72px;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #0b1320;
+      --bg-surface: #111e33;
+      --bg-surface-alt: #172640;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #1e3354;
+      --shadow-md: 0 6px 20px rgba(0,0,0,0.4);
+      --shadow-lg: 0 14px 35px rgba(0,0,0,0.6);
+    }
+
+    /* الحماية الصارمة وإلغاء التحديد وتصفير الهوامش */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+    }
+    input, textarea { 
+      user-select: text !important;
+      -webkit-user-select: text !important;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      padding-bottom: 68px;
+    }
+    @media (min-width: 992px) { body { padding-bottom: 0; } }
+
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; height: auto; display: block; object-fit: cover; pointer-events: none; }
+    button, input, select, textarea { font-family: inherit; font-size: 1rem; border: none; outline: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
+    @media (min-width: 768px) { .container { padding-inline: 1.5rem; } }
+
+    .section {
+      padding: 3.5rem 0;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) { .section { padding: 4.5rem 0; } }
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 2.2rem;
+      padding-inline: 0.5rem;
+    }
+    .badge-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    [data-theme="dark"] .section-title { color: #fff; }
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+
+    /* الأزرار */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0.65rem 1.25rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      min-height: 44px;
+      font-size: 0.92rem;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: #fff; }
+    .btn-primary:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .btn-secondary { background: linear-gradient(135deg, var(--secondary), var(--secondary-hover)); color: #0a2240; font-weight: 800; }
+    .btn-secondary:hover { transform: translateY(-2px); filter: brightness(1.06); }
+    .btn-outline { border: 1.5px solid var(--border); color: var(--text-main); background: transparent; }
+    .btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
+    .btn-whatsapp { background: #25d366; color: #fff; font-weight: 800; }
+    .btn-whatsapp:hover { background: #1eb853; transform: translateY(-2px); }
+    .btn-sm { padding: 0.35rem 0.75rem; font-size: 0.82rem; min-height: 36px; }
+    .btn-danger { background: var(--danger); color: #fff; }
+    .btn-danger:hover { background: #b91c1c; }
+
+    /* Grids */
+    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 768px) { .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; } }
+    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 640px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .grid-4 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 480px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 992px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+    .card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+    .card:hover { border-color: rgba(197, 160, 89, 0.4); box-shadow: var(--shadow-md); }
+
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 0.9rem; width: 100%; }
+    .form-label { font-size: 0.85rem; font-weight: 700; color: var(--text-main); }
+    .form-control {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      background: var(--bg-surface-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: var(--transition);
+      min-height: 44px;
+    }
+    .form-control:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.18);
+    }
+
+    /* الهيدر وشريط التنقل */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+    [data-theme="dark"] .site-header { background: rgba(17, 30, 51, 0.96); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+    .brand { display: flex; align-items: center; gap: 8px; max-width: 75%; overflow: hidden; }
+    .brand-logo-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .brand-text { overflow: hidden; }
+    .brand-text h1 {
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    [data-theme="dark"] .brand-text h1 { color: #fff; }
+    .brand-text span {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-desktop { display: none; }
+    @media (min-width: 1100px) {
+      .nav-desktop { display: flex; align-items: center; gap: 0.9rem; }
+      .nav-link { font-weight: 700; font-size: 0.88rem; color: var(--text-main); padding: 6px 0; }
+      .nav-link:hover { color: var(--secondary); }
+    }
+
+    .header-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .icon-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-surface-alt);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .icon-btn:hover { background: var(--secondary); color: #fff; }
+    .mobile-nav-toggle { display: flex; }
+    @media (min-width: 1100px) { .mobile-nav-toggle { display: none; } }
+
+    /* القائمة الجانبية للهاتف */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      width: 280px;
+      max-width: 85%;
+      background: var(--bg-surface);
+      z-index: 2200;
+      box-shadow: -5px 0 25px rgba(0,0,0,0.25);
+      transition: right 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+      overflow-y: auto;
+    }
+    .mobile-drawer.open { right: 0; }
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(3px);
+      z-index: 2150;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.28s;
+    }
+    .drawer-overlay.active { opacity: 1; visibility: visible; }
+
+    /* شريط الهاتف السفلي */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      z-index: 990;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.06);
+    }
+    @media (min-width: 992px) { .bottom-bar { display: none; } }
+    .bottom-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      gap: 2px;
+      flex: 1;
+      height: 100%;
+    }
+    .bottom-item i { font-size: 1.1rem; }
+    .bottom-item.active, .bottom-item:hover { color: var(--secondary); }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      padding: 3rem 0 5rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 34, 64, 0.95) 0%, rgba(5, 18, 36, 0.97) 100%);
+      z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .hero-title { font-size: clamp(1.7rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.25; margin-bottom: 0.9rem; }
+    .hero-desc { font-size: clamp(0.9rem, 2vw, 1.15rem); color: #cbd5e1; line-height: 1.7; margin-bottom: 1.5rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 2.2rem; }
+    @media (max-width: 480px) { .hero-actions .btn { width: 100%; } }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 1.25rem;
+    }
+    @media (min-width: 640px) { .hero-stats { grid-template-columns: repeat(4, 1fr); } }
+    .stat-box h3 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--secondary); }
+    .stat-box p { font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+
+    /* شريط الخدمات السريعة */
+    .quick-bar { margin-top: -3.2rem; position: relative; z-index: 10; }
+    .quick-inner {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 0.65rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+    }
+    @media (min-width: 640px) { .quick-inner { grid-template-columns: repeat(4, 1fr); padding: 0.9rem; } }
+    @media (min-width: 992px) { .quick-inner { grid-template-columns: repeat(7, 1fr); } }
+    .quick-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0.65rem 0.2rem;
+      background: var(--bg-surface-alt);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.75rem;
+      font-weight: 700;
+      gap: 4px;
+      transition: var(--transition);
+    }
+    .quick-card i { font-size: 1.3rem; color: var(--secondary); }
+    .quick-card:hover { background: var(--primary); color: #fff; }
+    .quick-card:hover i { color: #fff; }
+
+    /* الرسوم الدراسية */
+    .fee-selector-wrapper {
+      background: var(--bg-surface);
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 768px) { .fee-selector-wrapper { padding: 2rem; } }
+    .fee-details-box {
+      background: var(--bg-surface-alt);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .fee-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.92rem;
+    }
+    .fee-item-row:last-child { border-bottom: none; }
+    .fee-total-badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .fee-total-badge h3 { color: var(--secondary); font-size: 1.4rem; font-weight: 900; }
+
+    /* جدول الحصص */
+    .timetable-controls-box {
+      background: var(--bg-surface);
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+    .tt-view-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: var(--bg-surface-alt);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+      border-right: 5px solid var(--secondary);
+    }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+    .timetable-grid-table {
+      width: 100%;
+      min-width: 820px;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--bg-surface);
+    }
+    .timetable-grid-table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.85rem 0.6rem;
+      font-weight: 800;
+      font-size: 0.88rem;
+      text-align: center;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      white-space: nowrap;
+    }
+    .timetable-grid-table th:last-child { border-left: none; }
+    .timetable-grid-table td {
+      padding: 0.75rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      vertical-align: top;
+      background: var(--bg-surface);
+      transition: var(--transition);
+      height: 100px;
+      width: 13.5%;
+    }
+    .timetable-grid-table td:first-child {
+      background: var(--bg-surface-alt);
+      font-weight: 800;
+      color: var(--primary);
+      text-align: center;
+      width: 11%;
+      vertical-align: middle;
+    }
+    [data-theme="dark"] .timetable-grid-table td:first-child { color: var(--secondary); }
+    .timetable-grid-table td:last-child { border-left: none; }
+    .timetable-grid-table tr:hover td { background: rgba(197, 160, 89, 0.05); }
+
+    .tt-slot-card {
+      background: var(--bg-surface-alt);
+      border-radius: var(--radius-sm);
+      padding: 0.55rem;
+      border-right: 3px solid var(--secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      height: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .tt-slot-subject {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+    [data-theme="dark"] .tt-slot-subject { color: #fff; }
+    .tt-slot-teacher {
+      font-size: 0.74rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 2px;
+      font-weight: 600;
+    }
+    .teacher-wa-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      background: #25d366;
+      color: #fff !important;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 7px;
+      border-radius: var(--radius-full);
+      margin-top: auto;
+      transition: var(--transition);
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(37, 211, 102, 0.2);
+    }
+    .teacher-wa-badge:hover {
+      background: #1eb853;
+      transform: scale(1.03);
+    }
+
+    /* خريطة المدرسة */
+    .school-map-wrapper {
+      margin-top: 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow-md);
+      background: var(--bg-surface);
+    }
+    .school-map-wrapper iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      display: block;
+    }
+
+    /* كروت إرشادات الأمن والسلامة */
+    .safety-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      border-right: 5px solid var(--accent);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .safety-card h4 {
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    [data-theme="dark"] .safety-card h4 { color: #fff; }
+    .safety-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    /* لوحة التحكم */
+    #adminOverlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-body);
+      z-index: 3000;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    #adminOverlay.active { display: flex; }
+    .admin-topbar {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      flex-shrink: 0;
+      border-bottom: 2px solid var(--secondary);
+    }
+    .admin-body {
+      display: flex;
+      flex: 1;
+      min-height: calc(100vh - 60px);
+    }
+    @media (max-width: 992px) { .admin-body { flex-direction: column; } }
+    .admin-sidebar {
+      width: 260px;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border);
+      padding: 0.75rem 0;
+      flex-shrink: 0;
+    }
+    @media (max-width: 992px) {
+      .admin-sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        border-left: none;
+        border-bottom: 1px solid var(--border);
+        padding: 0.5rem;
+        gap: 6px;
+        position: sticky;
+        top: 56px;
+        z-index: 40;
+      }
+    }
+    .adm-link {
+      padding: 0.75rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.88rem;
+      border-right: 4px solid transparent;
+      white-space: nowrap;
+    }
+    .adm-link div { display: flex; align-items: center; gap: 10px; }
+    .adm-link:hover, .adm-link.active {
+      background: var(--bg-surface-alt);
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+    .adm-link-badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      background: rgba(197, 160, 89, 0.2);
+      color: var(--secondary);
+    }
+
+    .admin-main {
+      flex: 1;
+      padding: 1.25rem;
+      overflow-y: auto;
+      background: var(--bg-body);
+    }
+    @media (min-width: 768px) { .admin-main { padding: 1.75rem; } }
+
+    .admin-header-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .admin-search-bar {
+      display: flex;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.2rem 0.6rem;
+      width: 100%;
+      max-width: 320px;
+    }
+    .admin-search-bar input {
+      padding: 0.4rem 0.6rem;
+      width: 100%;
+      background: transparent;
+      font-size: 0.9rem;
+    }
+
+    .adm-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .adm-item-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .adm-item-card:hover { border-color: rgba(197, 160, 89, 0.4); box-shadow: var(--shadow-md); }
+    @media (min-width: 768px) {
+      .adm-item-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .kpi-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .kpi-data h3 { font-size: 1.5rem; font-weight: 900; line-height: 1.1; }
+    .kpi-data p { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+
+    /* النوافذ المنبثقة */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 34, 64, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 6000 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .modal-backdrop.show { opacity: 1; visibility: visible; }
+    .modal-content {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      max-width: 620px;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.95);
+      transition: transform 0.2s;
+    }
+    .modal-backdrop.show .modal-content { transform: scale(1); }
+    .modal-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: var(--bg-surface);
+      z-index: 5;
+    }
+    .modal-body { padding: 1.2rem; }
+    .modal-footer {
+      padding: 0.85rem 1.25rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      position: sticky;
+      bottom: 0;
+      background: var(--bg-surface);
+      z-index: 5;
+    }
+
+    .warning-icon-box {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: rgba(220, 38, 38, 0.12);
+      color: var(--danger);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+    }
+
+    .toast-container {
+      position: fixed;
+      bottom: 70px;
+      left: 12px;
+      right: 12px;
+      z-index: 99999 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      pointer-events: none;
+    }
+    @media (min-width: 500px) { .toast-container { right: auto; width: 340px; } }
+    .toast {
+      background: var(--bg-surface);
+      border-right: 4px solid var(--secondary);
+      box-shadow: var(--shadow-lg);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      pointer-events: auto;
+      animation: toastAnim 0.25s ease forwards;
+    }
+    .toast.success { border-color: var(--accent); }
+    .toast.error { border-color: var(--danger); }
+    @keyframes toastAnim { from { transform: translateY(15px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* الفوتر والأيقونة السرية الصغيرة */
+    .site-footer {
+      background: #061426;
+      color: #94a3b8;
+      padding: 3rem 0 1.25rem;
+      border-top: 3px solid var(--secondary);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; } }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+      position: relative;
+      padding-bottom: 5px;
+    }
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--secondary);
+    }
+    .footer-links li { margin-bottom: 0.4rem; font-size: 0.88rem; }
+    .footer-links a:hover { color: var(--secondary); }
+
+    /* الأيقونة السرية الصغيرة للإدارة في الفوتر */
+    .secret-admin-trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.2);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-right: 8px;
+      vertical-align: middle;
+      font-size: 0.72rem;
+    }
+    .secret-admin-trigger:hover {
+      color: var(--secondary);
+      border-color: rgba(197, 160, 89, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .page-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-surface);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      transition: opacity 0.3s;
+    }
+    .page-loader.hidden { opacity: 0; pointer-events: none; }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid var(--border);
+      border-top-color: var(--secondary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .accordion-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.6rem;
+      background: var(--bg-surface);
+      overflow: hidden;
+    }
+    .accordion-header {
+      padding: 0.85rem 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--primary);
+    }
+    [data-theme="dark"] .accordion-header { color: #fff; }
+    .accordion-body {
+      padding: 0 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease, padding 0.25s ease;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .accordion-item.active .accordion-body {
+      padding: 0.85rem 1rem 1rem;
+      max-height: 300px;
+      border-top: 1px dashed var(--border);
+    }
+    .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+  </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+  <!-- شاشة التحميل الأولية -->
+  <div class="page-loader" id="pageLoader">
+    <div class="spinner"></div>
+    <p style="font-weight:800; color:var(--primary); font-size:0.95rem;">مدرسة الثروات الوطنية الخاصة – جاري التحميل بأمان...</p>
+  </div>
+
+  <!-- حاوية التنبيهات -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- هيدر الموقع (تم إخفاء أيقونة وزر الإدارة منه لضمان السرية والخصوصية) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <img src="" id="navLogoImg" alt="شعار المدرسة" class="brand-logo-img" />
+        <div class="brand-text">
+          <h1 id="navSchoolName">مدرسة الثروات الوطنية الخاصة</h1>
+          <span id="navSchoolSub">Al Tharawat National School – TNS</span>
+        </div>
+      </a>
+
+      <!-- القائمة الرئيسية للشاشات الكبيرة -->
+      <nav class="nav-desktop">
+        <a href="#home" class="nav-link">الرئيسية</a>
+        <a href="#about" class="nav-link">عن المدرسة</a>
+        <a href="#academics" class="nav-link">المراحل</a>
+        <a href="#fees" class="nav-link">الرسوم الدراسية</a>
+        <a href="#timetable" class="nav-link">جدول الحصص</a>
+        <a href="#safety" class="nav-link">الأمن والسلامة</a>
+        <a href="#transport" class="nav-link">النقل</a>
+        <a href="#news" class="nav-link">الأخبار</a>
+        <a href="#calendar" class="nav-link">التقويم</a>
+        <a href="#careers" class="nav-link">الوظائف</a>
+        <a href="#contact" class="nav-link">اتصل بنا</a>
+      </nav>
+
+      <!-- إجراءات الهيدر -->
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" title="بحث في الموقع"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn" id="themeBtn" title="الوضع الليلي"><i class="fa-solid fa-moon"></i></button>
+        <button class="icon-btn mobile-nav-toggle" id="openDrawerBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- درج القائمة للهاتف -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.2rem;">
+      <h3 style="font-weight:900; color:var(--primary); font-size:1.05rem;">القائمة الرئيسية</h3>
+      <button class="icon-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.75rem;">
+      <a href="#home" class="drawer-link">الرئيسية</a>
+      <a href="#about" class="drawer-link">عن المدرسة والرؤية</a>
+      <a href="#academics" class="drawer-link">المراحل والمناهج</a>
+      <a href="#fees" class="drawer-link">الرسوم الدراسية (المسار المتقدم)</a>
+      <a href="#timetable" class="drawer-link">جدول الحصص الأسبوعي (1 - 12)</a>
+      <a href="#safety" class="drawer-link">الأمن والسلامة والتعميمات</a>
+      <a href="#transport" class="drawer-link">خدمات النقل والمواصلات</a>
+      <a href="#news" class="drawer-link">الأخبار والفعاليات</a>
+      <a href="#calendar" class="drawer-link">التقويم المدرسي</a>
+      <a href="#careers" class="drawer-link">الوظائف الشاغرة</a>
+      <a href="#files" class="drawer-link">مركز الملفات والنماذج</a>
+      <a href="#contact" class="drawer-link">تواصل معنا وموقعنا</a>
+    </div>
+  </aside>
+
+  <!-- شريط الهاتف السفلي -->
+  <nav class="bottom-bar">
+    <a href="#home" class="bottom-item active"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
+    <a href="#fees" class="bottom-item"><i class="fa-solid fa-sack-dollar"></i><span>الرسوم</span></a>
+    <a href="#timetable" class="bottom-item"><i class="fa-solid fa-calendar-days"></i><span>الجدول</span></a>
+    <a href="#safety" class="bottom-item"><i class="fa-solid fa-shield-halved"></i><span>السلامة</span></a>
+    <a href="#contact" class="bottom-item"><i class="fa-solid fa-phone"></i><span>تواصل</span></a>
+  </nav>
+
+  <main>
+    <!-- الواجهة الرئيسية Hero -->
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge-sub" style="color:var(--secondary); background:rgba(197, 160, 89, 0.2); border:1px solid rgba(197, 160, 89, 0.4);">
+            <i class="fa-solid fa-award"></i> <span>صرح تعليمي وطني رائد بأبوظبي</span>
+          </div>
+          <h1 class="hero-title" id="heroTitle">نبني قادة الغد بتعليم متميز وهوية وطنية راسخة</h1>
+          <p class="hero-desc" id="heroDesc">
+            أهلاً بكم في مدرسة الثروات الوطنية الخاصة بأبوظبي، حيث يلتقي التميز الأكاديمي بمنهاج وزارة التربية والتعليم الإماراتي المسار المتقدم، مع بيئة تعليمية ذكية ومحفزة على الابتكار والقيم الأصيلة.
+          </p>
+          <div class="hero-actions">
+            <a href="#fees" class="btn btn-secondary"><i class="fa-solid fa-calculator"></i> استعراض الرسوم الدراسية</a>
+            <a href="#timetable" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);"><i class="fa-solid fa-calendar-check"></i> جدول الحصص الأسبوعي</a>
+            <a href="#safety" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);"><i class="fa-solid fa-shield-halved"></i> إرشادات الأمن والسلامة</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <h3 id="statStudents">+1,850</h3>
+              <p>طالب وطالبة</p>
+            </div>
+            <div class="stat-box">
+              <h3 id="statTeachers">+130</h3>
+              <p>كادر تعليمي وإداري</p>
+            </div>
+            <div class="stat-box">
+              <h3 id="statSuccess">100%</h3>
+              <p>نسبة نجاح الثانوية</p>
+            </div>
+            <div class="stat-box">
+              <h3 id="statYears">+25</h3>
+              <p>عاماً من التميز</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- شريط الخدمات السريعة -->
+    <div class="container quick-bar">
+      <div class="quick-inner">
+        <a href="#fees" class="quick-card"><i class="fa-solid fa-sack-dollar"></i><span>رسوم الصفوف</span></a>
+        <a href="#timetable" class="quick-card"><i class="fa-solid fa-table-cells"></i><span>جدول الحصص</span></a>
+        <a href="#safety" class="quick-card"><i class="fa-solid fa-shield-halved"></i><span>الأمن والسلامة</span></a>
+        <a href="#transport" class="quick-card"><i class="fa-solid fa-bus-simple"></i><span>النقل المدرسي</span></a>
+        <a href="#calendar" class="quick-card"><i class="fa-solid fa-calendar-days"></i><span>التقويم</span></a>
+        <a href="#careers" class="quick-card"><i class="fa-solid fa-user-tie"></i><span>الوظائف</span></a>
+        <a href="#contact" class="quick-card"><i class="fa-solid fa-map-location-dot"></i><span>خريطة المدرسة</span></a>
+      </div>
+    </div>
+
+    <!-- عن المدرسة -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 2rem;">
+          <div>
+            <div class="badge-sub"><i class="fa-solid fa-landmark"></i> عن المدرسة</div>
+            <h2 class="section-title" id="pubAboutTitle">صرح تربوي يصنع أجيال المستقبل</h2>
+            <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1rem; font-size:0.95rem;" id="pubAboutDesc1">
+              تأسست مدرسة الثروات الوطنية الخاصة في إمارة أبوظبي لتكون منارة تعليمية تسهم بفاعلية في بناء جيل متمسك بهويته الوطنية الإماراتية، ومؤهل بأحدث المهارات العلمية التي تواكب تطلعات مئوية الإمارات.
+            </p>
+            <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1.5rem; font-size:0.95rem;" id="pubAboutDesc2">
+              نطبق منهاج وزارة التربية والتعليم بأعلى المعايير (المسار المتقدم)، مع توفير بيئة تعليمية ذكية، ومختبرات علمية متقدمة، ومرافق رياضية متكاملة لجميع الصفوف من الروضة حتى الثاني عشر.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent); font-size:1.1rem;"></i>
+                <strong style="font-size:0.92rem;">مرخصة ومعتمدة من دائرة التعليم والمعرفة بأبوظبي (ADEK)</strong>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent); font-size:1.1rem;"></i>
+                <strong style="font-size:0.92rem;">مبانٍ وفصول مستقلة للبنين والبنات بدءاً من الصف الخامس</strong>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=900&auto=format&fit=crop" id="pubAboutImg" alt="مدرسة الثروات" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); width:100%; height:340px;" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الرؤية والرسالة والقيم -->
+    <section class="section" style="background:var(--bg-surface-alt);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-compass"></i> هويتنا ورسالتنا</div>
+          <h2 class="section-title">الرؤية والرسالة والقيم</h2>
+          <p class="section-subtitle">الركائز الأساسية التي ترتكز عليها استراتيجيتنا لبناء أجيال واثقة ومبدعة.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <i class="fa-solid fa-eye" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem;"></i>
+            <h3 style="margin-bottom:0.4rem; font-size:1.2rem;">رؤيتنا</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;" id="pubVisionText">الريادة في تقديم تعليم وطني متقدم يُلهم الطلاب للإبداع، ويُرسخ حب الوطن، ويؤهلهم للمنافسة العالمية باقتدار.</p>
+          </div>
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <i class="fa-solid fa-bullseye" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem;"></i>
+            <h3 style="margin-bottom:0.4rem; font-size:1.2rem;">رسالتنا</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;" id="pubMissionText">توفير بيئة تعليمية آمنة ترتكز على المنهاج الوزاري المتقدم، وتوظيف أحدث وسائل التعلم الذكي بالشراكة مع الأسرة.</p>
+          </div>
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <i class="fa-solid fa-gem" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem;"></i>
+            <h3 style="margin-bottom:0.4rem; font-size:1.2rem;">قيمنا الجوهرية</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7;" id="pubValuesText">الهوية الوطنية • التسامح والتعايش • النزاهة والمسؤولية • الابتكار والتميز • روح الفريق والعمل المشترك.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- المراحل التعليمية -->
+    <section class="section" id="academics">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-graduation-cap"></i> المراحل والمناهج</div>
+          <h2 class="section-title">المراحل التعليمية بالمدرسة</h2>
+          <p class="section-subtitle">منظومة تعليمية متكاملة ترتكز على التأسيس القوي وصولاً للمسار المتقدم في الثانوية العامة.</p>
+        </div>
+        <div class="grid-4" id="pubAcademicsGrid"></div>
+      </div>
+    </section>
+
+    <!-- الرسوم الدراسية (المسار المتقدم فقط للثانوية) -->
+    <section class="section" style="background:var(--bg-surface-alt);" id="fees">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-receipt"></i> الشفافية المالية</div>
+          <h2 class="section-title">الرسوم الدراسية المعتمدة (المسار المتقدم)</h2>
+          <p class="section-subtitle">اختر الصف الدراسي من القائمة المنسدلة لعرض تفاصيل القسط السنوي، الكتب، الزي، والنقل فورياً وبدقة (تم اعتماد المسار المتقدم للثانوية).</p>
+        </div>
+
+        <div class="fee-selector-wrapper">
+          <div class="form-group" style="margin-bottom:1.2rem;">
+            <label class="form-label" style="font-size:1rem;"><i class="fa-solid fa-list-check" style="color:var(--secondary);"></i> اختر الصف الدراسي لعرض الرسوم بالتفصيل:</label>
+            <select class="form-control" id="feesGradeDropdown" style="font-size:1.05rem; font-weight:700; border-color:var(--secondary); background:var(--bg-surface);">
+            </select>
+          </div>
+
+          <div class="fee-details-box" id="selectedGradeFeeCard"></div>
+
+          <div style="margin-top:1.5rem; padding-top:1.2rem; border-top:1px dashed var(--border);">
+            <h4 style="font-size:1rem; margin-bottom:0.8rem; color:var(--primary);"><i class="fa-solid fa-calculator" style="color:var(--secondary)"></i> تخصيص الحساب التقديري وخدمات الطالب:</h4>
+            
+            <div class="grid-2" style="margin-bottom:0.8rem;">
+              <div class="form-group">
+                <label class="form-label">خدمة النقل المدرسي (الحافلة)</label>
+                <select class="form-control" id="feeOptionBus">
+                  <option value="yes">نعم، تشمل النقل المعتمد</option>
+                  <option value="no">بدون خدمة النقل المدرسي</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">خصم الأخوة المسجلين</label>
+                <select class="form-control" id="feeOptionDiscount">
+                  <option value="0">بدون خصم إضافي</option>
+                  <option value="0.05">خصم الأخ الثاني (5%)</option>
+                  <option value="0.10">خصم الأخ الثالث فما فوق (10%)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:1.2rem; margin-bottom:1rem;">
+              <label style="display:flex; align-items:center; gap:8px; font-weight:700; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" id="feeOptionBooks" checked style="width:18px; height:18px; accent-color:var(--secondary);" />
+                <span>إدراج رسوم الكتب المدرسية</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-weight:700; font-size:0.88rem; cursor:pointer;">
+                <input type="checkbox" id="feeOptionUniform" checked style="width:18px; height:18px; accent-color:var(--secondary);" />
+                <span>إدراج رسوم الزي المدرسي</span>
+              </label>
+            </div>
+
+            <div class="fee-total-badge">
+              <div>
+                <span style="font-size:0.82rem; color:#cbd5e1;">الإجمالي السنوي التقديري المحدد:</span>
+                <h3 id="feeCustomTotalDisplay">0 د.إ</h3>
+              </div>
+              <button class="btn btn-secondary btn-sm" id="recalcCustomFeeBtn"><i class="fa-solid fa-arrows-rotate"></i> تحديث</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- جدول الحصص الأسبوعي -->
+    <section class="section" id="timetable">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-calendar-week"></i> الجداول الدراسية التفاعلية</div>
+          <h2 class="section-title">جدول الحصص الأسبوعي لأولياء الأمور والطلبة</h2>
+          <p class="section-subtitle">حدد الصف الدراسي والشعبة لعرض جدول الحصص الأسبوعي الكامل من الإثنين إلى الجمعة، مع إمكانية التواصل المباشر مع معلم المادة عبر واتساب.</p>
+        </div>
+
+        <div class="timetable-controls-box">
+          <div class="grid-3" style="align-items: flex-end; gap: 1rem;">
+            <div class="form-group" style="margin:0;">
+              <label class="form-label" style="font-weight:800;"><i class="fa-solid fa-graduation-cap" style="color:var(--secondary);"></i> اختر الصف الدراسي (1 - 12):</label>
+              <select class="form-control" id="ttGradeSelect" style="font-weight:700; border-color:var(--secondary);">
+                <option value="الصف الأول">الصف الأول الابتدائي</option>
+                <option value="الصف الثاني">الصف الثاني الابتدائي</option>
+                <option value="الصف الثالث">الصف الثالث الابتدائي</option>
+                <option value="الصف الرابع">الصف الرابع الابتدائي</option>
+                <option value="الصف الخامس">الصف الخامس</option>
+                <option value="الصف السادس">الصف السادس</option>
+                <option value="الصف السابع">الصف السابع</option>
+                <option value="الصف الثامن">الصف الثامن</option>
+                <option value="الصف التاسع (متقدم)" selected>الصف التاسع (متقدم)</option>
+                <option value="الصف العاشر (متقدم)">الصف العاشر (متقدم)</option>
+                <option value="الصف الحادي عشر (متقدم)">الصف الحادي عشر (متقدم)</option>
+                <option value="الصف الثاني عشر (متقدم)">الصف الثاني عشر (متقدم)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin:0;">
+              <label class="form-label" style="font-weight:800;"><i class="fa-solid fa-users-rectangle" style="color:var(--secondary);"></i> اختر الشعبة (1 - 10):</label>
+              <select class="form-control" id="ttSectionSelect" style="font-weight:700; border-color:var(--secondary);">
+                <option value="1">شعبة 1</option>
+                <option value="2">شعبة 2</option>
+                <option value="3">شعبة 3</option>
+                <option value="4">شعبة 4</option>
+                <option value="5">شعبة 5</option>
+                <option value="6">شعبة 6</option>
+                <option value="7">شعبة 7</option>
+                <option value="8">شعبة 8</option>
+                <option value="9">شعبة 9</option>
+                <option value="10">شعبة 10</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin:0;">
+              <label class="form-label" style="font-weight:800;"><i class="fa-solid fa-calendar-day" style="color:var(--secondary);"></i> طريقة العرض والأيام:</label>
+              <select class="form-control" id="ttDayOption" style="font-weight:700;">
+                <option value="week">الأسبوع بالكامل (من الإثنين إلى الجمعة)</option>
+                <option value="الإثنين">يوم الإثنين فقط</option>
+                <option value="الثلاثاء">يوم الثلاثاء فقط</option>
+                <option value="الأربعاء">يوم الأربعاء فقط</option>
+                <option value="الخميس">يوم الخميس فقط</option>
+                <option value="الجمعة">يوم الجمعة فقط</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:1.2rem; padding-top:1rem; border-top:1px dashed var(--border);">
+            <div style="font-size:0.85rem; color:var(--text-muted);">
+              <i class="fa-solid fa-circle-info" style="color:var(--info);"></i> انقر على زر <span style="color:#25d366; font-weight:800;"><i class="fa-brands fa-whatsapp"></i> واتساب المعلم</span> في أي حصة لفتح محادثة استفسار فورية.
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-secondary btn-sm" id="ttRefreshBtn"><i class="fa-solid fa-arrows-rotate"></i> تحديث الجدول</button>
+              <button class="btn btn-outline btn-sm" onclick="window.print()"><i class="fa-solid fa-print"></i> طباعة الجدول</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tt-view-header">
+          <div>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">الجدول الدراسي المعتمد:</span>
+            <h3 style="font-size:1.2rem; font-weight:900; color:var(--primary);" id="ttCurrentHeading">الصف التاسع (متقدم) — شعبة 1</h3>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span class="badge-sub" style="margin:0;"><i class="fa-solid fa-clock"></i> الدوام الرسمي: 07:45 ص – 02:15 م</span>
+          </div>
+        </div>
+
+        <div id="timetableOutputContainer"></div>
+      </div>
+    </section>
+
+    <!-- قسم الأمن والسلامة والتعميمات الإرشادية لأولياء الأمور -->
+    <section class="section" style="background:var(--bg-surface-alt);" id="safety">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-shield-halved"></i> البيئة المدرسية الآمنة</div>
+          <h2 class="section-title" id="pubSafetyTitle">منظومة الأمن والسلامة المدرسية والتعميمات</h2>
+          <p class="section-subtitle" id="pubSafetyDesc">
+            تطبق مدرسة الثروات الوطنية أعلى معايير السلامة والرقابة لضمان أمن وسلامة أبنائنا الطلبة في كافة الأوقات. يُرجى من أولياء الأمور الكرام الالتزام التام بالتعليمات والتعميمات التالية:
+          </p>
+        </div>
+
+        <div class="grid-2" style="gap:1.5rem; margin-bottom: 2rem;">
+          <div class="safety-card">
+            <h4><i class="fa-solid fa-id-card" style="color:var(--accent);"></i> تصاريح وبطاقات استلام الطلبة</h4>
+            <p>يمنع تماماً تسليم أي طالب أو طالبة لغير ولي الأمر أو الشخص المصرح له رسمياً والمسجل في بطاقة الاستلام المدرسية المعتمدة لضمان أمان الأطفال.</p>
+          </div>
+          <div class="safety-card">
+            <h4><i class="fa-solid fa-triangle-exclamation" style="color:var(--warning);"></i> إجراءات الطوارئ والتقلبات الجوية</h4>
+            <p>يتم تفعيل خطط الطوارئ بالتنسيق الفوري مع دائرة التعليم والمعرفة (ADEK) وهيئة الدفاع المدني، وفي حالات الضباب والأمطار الكثيفة يُحوّل الدوام للتعلم عن بُعد ويُبلّغ أولياء الأمور برسائل نصية رسمية.</p>
+          </div>
+          <div class="safety-card">
+            <h4><i class="fa-solid fa-bus-side" style="color:var(--info);"></i> بروتوكول سلامة الحافلات المدرسية</h4>
+            <p>يرافق كل حافلة مشرفة معتمدة مدربة على الإسعافات وتأمين عبور المشاة، مع نظام فحص الحافلة الذكي للتأكد من خلو المقاعد تماماً عند نهاية كل جولة.</p>
+          </div>
+          <div class="safety-card">
+            <h4><i class="fa-solid fa-car-on" style="color:var(--danger);"></i> تنظيم السير أمام بوابات المدرسة</h4>
+            <p>نهيب بالسادة أولياء الأمور الكرام عدم الوقوف المزدوج، والالتزام بمسارات النزول السريع، والالتزام بالسرعة المحددة (20 كم/س) في المحيط المدرسي.</p>
+          </div>
+        </div>
+
+        <!-- التعميمات المحدثة من الإدارة -->
+        <div class="card" style="padding:1.5rem;">
+          <h3 style="font-size:1.15rem; color:var(--primary); font-weight:800; margin-bottom:1rem;">
+            <i class="fa-solid fa-bullhorn" style="color:var(--secondary);"></i> أحدث تعميمات وإرشادات السلامة لأولياء الأمور
+          </h3>
+          <div id="safetyCircularsContainer">
+            <p style="color:var(--text-muted); font-size:0.9rem;">جاري تحميل التعميمات المعتمدة...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- خدمات النقل -->
+    <section class="section" id="transport">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-bus"></i> أسطول النقل</div>
+          <h2 class="section-title">خدمات ومسارات النقل المدرسي</h2>
+          <p class="section-subtitle">حافلات حديثة ومكيفة تخضع لأعلى معايير السلامة ومجهزة بأنظمة التتبع الذكي.</p>
+        </div>
+
+        <div class="grid-3" id="pubTransportGrid" style="margin-bottom:2rem;"></div>
+
+        <div style="text-align:center;">
+          <button class="btn btn-primary" id="openTransportModalBtn"><i class="fa-solid fa-file-pen"></i> تقديم طلب حافلة أو تعديل مسار</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأخبار والفعاليات -->
+    <section class="section" style="background:var(--bg-surface-alt);" id="news">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-newspaper"></i> المركز الإعلامي</div>
+          <h2 class="section-title">آخر الأخبار والفعاليات</h2>
+          <p class="section-subtitle">تابع كل جديد من فعاليات وأنشطة وإنجازات مدرسة الثروات الوطنية الخاصة.</p>
+        </div>
+        <div class="grid-3" id="publicNewsGrid"></div>
+      </div>
+    </section>
+
+    <!-- التقويم المدرسي -->
+    <section class="section" id="calendar">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-calendar-day"></i> العام الدراسي</div>
+          <h2 class="section-title">التقويم المدرسي المعتمد</h2>
+          <p class="section-subtitle">مواعيد الفصول الدراسية والاختبارات والإجازات الرسمية للعام الدراسي.</p>
+        </div>
+        <div class="grid-3" id="publicCalendarList"></div>
+      </div>
+    </section>
+
+    <!-- الوظائف الشاغرة -->
+    <section class="section" style="background:var(--bg-surface-alt);" id="careers">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-briefcase"></i> الكفاءات التعليمية</div>
+          <h2 class="section-title">الوظائف الشاغرة والانضمام لفريقنا</h2>
+          <p class="section-subtitle">نستقطب نخبة المعلمين والإداريين المبدعين لبناء مستقبل تعليمي استثنائي.</p>
+        </div>
+        <div class="grid-2" id="publicJobsGrid"></div>
+      </div>
+    </section>
+
+    <!-- الملفات والروابط -->
+    <section class="section" id="files">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-folder-open"></i> الأدلة والاستمارات</div>
+          <h2 class="section-title">مركز الملفات والروابط الرقمية</h2>
+          <p class="section-subtitle">استعرض وحمّل الأدلة المدرسية واللوائح السلوكية واستمارات التسجيل بصيغة رقمية مباشرة.</p>
+        </div>
+        <div class="grid-3" id="publicFilesGrid"></div>
+      </div>
+    </section>
+
+    <!-- اتصل بنا وخريطة المدرسة -->
+    <section class="section" style="background:var(--bg-surface-alt);" id="contact">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="badge-sub"><i class="fa-solid fa-map-location-dot"></i> موقعنا وتواصلنا</div>
+          <h2 class="section-title">تواصل معنا وخريطة مقر المدرسة</h2>
+          <p class="section-subtitle">يسعدنا دائماً استقبال استفساراتكم وملاحظاتكم وزيارتكم الكريمة في مقر المدرسة.</p>
+        </div>
+
+        <div class="grid-2" style="gap:2rem;">
+          <div class="card" style="padding:1.5rem;">
+            <h3 style="margin-bottom:1.1rem; color:var(--primary); font-size:1.2rem;"><i class="fa-solid fa-building" style="color:var(--secondary)"></i> معلومات الاتصال المباشر</h3>
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div style="display:flex; align-items:flex-start; gap:10px;">
+                <i class="fa-solid fa-location-dot" style="font-size:1.2rem; color:var(--secondary); margin-top:3px;"></i>
+                <div>
+                  <strong>الموقع الجغرافي:</strong>
+                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactAddress">أبوظبي - بني ياس شرق، دولة الإمارات العربية المتحدة</p>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-phone" style="font-size:1.2rem; color:var(--secondary);"></i>
+                <div>
+                  <strong>رقم الهاتف:</strong>
+                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactPhone" dir="ltr">+971 2 582 2222</p>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.3rem; color:#25d366;"></i>
+                <div>
+                  <strong>واتساب المدرسة الرسمي:</strong>
+                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactWhatsApp" dir="ltr">+971 50 123 4567</p>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-envelope" style="font-size:1.2rem; color:var(--secondary);"></i>
+                <div>
+                  <strong>البريد الإلكتروني:</strong>
+                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactEmail">info@altharawat.sch.ae</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:1.25rem;">
+              <a href="#" id="directWhatsAppBtn" target="_blank" class="btn btn-whatsapp" style="width:100%;">
+                <i class="fa-brands fa-whatsapp"></i> محادثة واتساب فورية مع خدمة المتعاملين
+              </a>
+            </div>
+          </div>
+
+          <div class="card" style="padding:1.5rem;">
+            <h3 style="margin-bottom:1rem; color:var(--primary); font-size:1.2rem;"><i class="fa-solid fa-envelope-open-text" style="color:var(--secondary)"></i> أرسل استفسارك للإدارة</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label">الاسم الكامل</label>
+                <input type="text" class="form-control" id="cfName" required placeholder="الاسم الكريم" />
+              </div>
+              <div class="grid-2" style="gap:0.75rem; margin-bottom:0;">
+                <div class="form-group">
+                  <label class="form-label">رقم الهاتف</label>
+                  <input type="tel" class="form-control" id="cfPhone" required placeholder="05xxxxxxxx" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">القسم المعني</label>
+                  <select class="form-control" id="cfDept">
+                    <option value="القبول والتسجيل">القبول والتسجيل</option>
+                    <option value="الشؤون المالية والرسوم">الشؤون المالية والرسوم</option>
+                    <option value="الإدارة الأكاديمية">الإدارة الأكاديمية</option>
+                    <option value="قسم النقل والمواصلات">قسم النقل والمواصلات</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">نص الرسالة أو الاستفسار</label>
+                <textarea class="form-control" id="cfMessage" rows="3" required placeholder="اكتب تفاصيل الاستفسار..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> إرسال الاستفسار الآن</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- خريطة المدرسة التفاعلية المدمجة -->
+        <div class="school-map-wrapper">
+          <iframe id="schoolGoogleMapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14538.718873406213!2d54.6291669!3d24.3168892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e396906233a75%3A0xe5452f4a569d6ee1!2sBani%20Yas%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- الفوتر مع أيقونة القفل السرية التقديرية للإدارة -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.75rem;">
+            <img src="" id="footerLogoImg" class="brand-logo-img" alt="TNS" />
+            <strong style="color:#fff; font-size:1rem;" id="footerSchoolName">مدرسة الثروات الوطنية الخاصة</strong>
+          </div>
+          <p style="font-size:0.82rem; line-height:1.7;">
+            صرح تعليمي وطني رائد بأبوظبي يلتزم بترسيخ الهوية الوطنية وتقديم مناهج عصرية متقدمة تعزز الابتكار والتفوق الأكاديمي.
+          </p>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#about">عن المدرسة</a></li>
+            <li><a href="#fees">رسوم المسار المتقدم</a></li>
+            <li><a href="#timetable">جدول الحصص (1-12)</a></li>
+            <li><a href="#safety">الأمن والسلامة المدرسية</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>الخدمات والأدلة</h4>
+          <ul class="footer-links">
+            <li><a href="#files">مركز الملفات والنماذج</a></li>
+            <li><a href="#transport">حافلات النقل</a></li>
+            <li><a href="#calendar">التقويم المدرسي</a></li>
+            <li><a href="#contact">خريطة وموقع المدرسة</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.8rem;">
+        <p>© 2026 مدرسة الثروات الوطنية الخاصة – TNS. جميع الحقوق محفوظة ومحمية برمجياً.</p>
+        <!-- أيقونة الدخول الإداري السرية غير الملفتة للنظر -->
+        <button class="secret-admin-trigger" id="secretAdminTrigger" title="إدارة النظام">
+          <i class="fa-solid fa-lock"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+  <!-- 1. نافذة البحث -->
+  <div class="modal-backdrop" id="searchModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size:1.05rem; font-weight:800; color:var(--primary);"><i class="fa-solid fa-magnifying-glass"></i> بحث شامل في المدرسة</h3>
+        <button class="icon-btn" onclick="closeModal('searchModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" id="siteSearchInput" placeholder="اكتب كلمة البحث..." style="margin-bottom:0.75rem;" />
+        <div id="siteSearchResults" style="max-height:280px; overflow-y:auto; display:flex; flex-direction:column; gap:6px;">
+          <p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">اكتب أي كلمة للبحث الفوري...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. تسجيل دخول الأدمن المشفر المعتمد 100% على Firebase -->
+  <div class="modal-backdrop" id="adminLoginModal">
+    <div class="modal-content" style="max-width:420px;">
+      <div class="modal-header">
+        <h3 style="font-size:1.05rem; font-weight:800; color:var(--primary);" id="loginStepTitle">
+          <i class="fa-solid fa-shield-halved" style="color:var(--secondary)"></i> التحقق الأمني السحابي
+        </h3>
+        <button class="icon-btn" onclick="closeModal('adminLoginModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- الخطوة 1: اسم المستخدم وكلمة المرور -->
+      <form id="adminStep1Form">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">اسم المستخدم (Username)</label>
+            <input type="text" class="form-control" id="admUser" required placeholder="أدخل اسم المستخدم" autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">كلمة المرور (Password)</label>
+            <input type="password" class="form-control" id="admPass" required placeholder="••••••••" autocomplete="off" />
+          </div>
+          <p style="font-size:0.75rem; color:var(--text-muted); margin-top:5px;">
+            <i class="fa-solid fa-lock"></i> المصادقة مشفرة عبر خوادم Firebase السحابية الآمنة.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('adminLoginModal')">إلغاء</button>
+          <button type="submit" class="btn btn-primary" id="btnStep1Submit">متابعة للتحقق <i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+      </form>
+
+      <!-- الخطوة 2: رمز PIN السري -->
+      <form id="adminStep2Form" style="display:none;">
+        <div class="modal-body">
+          <div style="background:rgba(2, 134, 83, 0.1); border:1px solid var(--accent); border-radius:var(--radius-sm); padding:0.65rem; margin-bottom:0.75rem;">
+            <p style="font-size:0.82rem; color:var(--accent); font-weight:700;">
+              <i class="fa-solid fa-circle-check"></i> تم التحقق بنجاح من بيانات الحساب، أدخل رمز الـ PIN السري.
+            </p>
+          </div>
+          <div class="form-group">
+            <label class="form-label">رمز التحقق السري (Security PIN)</label>
+            <input type="password" class="form-control" id="admPin" required placeholder="••••" autofocus autocomplete="off" maxlength="8" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="backToStep1Btn"><i class="fa-solid fa-arrow-right"></i> رجوع</button>
+          <button type="submit" class="btn btn-primary" id="btnStep2Submit"><i class="fa-solid fa-right-to-bracket"></i> الدخول الآمن للوحة</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. التقديم على الوظيفة عبر واتساب -->
+  <div class="modal-backdrop" id="jobApplyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size:1.05rem; font-weight:800; color:var(--primary);" id="jobApplyModalTitle">التقديم على الوظيفة</h3>
+        <button class="icon-btn" onclick="closeModal('jobApplyModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="jobApplyForm">
+        <div class="modal-body">
+          <input type="hidden" id="applyJobTitle" />
+          <div style="background:rgba(37, 211, 102, 0.1); border:1px solid #25d366; border-radius:var(--radius-sm); padding:0.75rem; margin-bottom:1rem;">
+            <p style="font-size:0.82rem; color:#128c7e; font-weight:700;">
+              <i class="fa-brands fa-whatsapp" style="font-size:1.1rem;"></i> سيتم تسجيل بياناتك وتوجيهك لواتساب المدرسة الرسمي لإرسال السيرة الذاتية (CV).
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">اسم المتقدم الثلاثي</label>
+            <input type="text" class="form-control" id="appCandName" required placeholder="مثال: مريم سلطان المنصوري" />
+          </div>
+          <div class="grid-2" style="gap:0.75rem; margin-bottom:0;">
+            <div class="form-group">
+              <label class="form-label">رقم الهاتف المتحرك</label>
+              <input type="tel" class="form-control" id="appCandPhone" required placeholder="05xxxxxxxx" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">البريد الإلكتروني</label>
+              <input type="email" class="form-control" id="appCandEmail" required placeholder="name@example.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">المؤهل الدراسي وسنوات الخبرة</label>
+            <input type="text" class="form-control" id="appCandQual" required placeholder="المؤهل وسنوات الخبرة" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">نبذة وملاحظات إضافية</label>
+            <textarea class="form-control" id="appCandNotes" rows="2" placeholder="أي تفاصيل تود إضافتها..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('jobApplyModal')">إلغاء</button>
+          <button type="submit" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> إرسال عبر واتساب</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. طلب خدمة النقل -->
+  <div class="modal-backdrop" id="transportModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size:1.05rem; font-weight:800; color:var(--primary);">طلب خدمة النقل المدرسي</h3>
+        <button class="icon-btn" onclick="closeModal('transportModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="transportForm">
+        <div class="modal-body">
+          <div class="grid-2" style="gap:0.75rem; margin-bottom:0;">
+            <div class="form-group">
+              <label class="form-label">اسم الطالب</label>
+              <input type="text" class="form-control" id="trStudentName" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">الصف والشعبة</label>
+              <input type="text" class="form-control" id="trGrade" required placeholder="مثال: الصف التاسع متقدم - شعبة 1" />
+            </div>
+          </div>
+          <div class="grid-2" style="gap:0.75rem; margin-bottom:0;">
+            <div class="form-group">
+              <label class="form-label">نوع الطلب</label>
+              <select class="form-control" id="trType">
+                <option value="اشتراك جديد بالحافلة">اشتراك جديد بالحافلة</option>
+                <option value="تعديل عنوان السكن">تعديل عنوان السكن</option>
+                <option value="إلغاء الاشتراك">إلغاء الاشتراك بالحافلة</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">هاتف ولي الأمر</label>
+              <input type="tel" class="form-control" id="trParentPhone" required placeholder="05xxxxxxxx" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">عنوان السكن بالتفصيل</label>
+            <textarea class="form-control" id="trAddress" rows="2" required placeholder="المنطقة، الحوض، الشارع..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('transportModal')">إلغاء</button>
+          <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. نافذة الإدارة الديناميكية الشاملة -->
+  <div class="modal-backdrop" id="adminDynamicModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size:1.1rem; font-weight:800; color:var(--primary);" id="dynModalTitle">إدارة العنصر</h3>
+        <button class="icon-btn" onclick="closeModal('adminDynamicModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="adminDynamicForm">
+        <input type="hidden" id="dynSectionKey" />
+        <input type="hidden" id="dynEditId" />
+        <div class="modal-body" id="dynModalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModal('adminDynamicModal')">إلغاء</button>
+          <button type="submit" class="btn btn-primary" id="dynSubmitBtn"><i class="fa-solid fa-floppy-disk"></i> حفظ وتحديث الموقع</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. النافذة التحذيرية المخصصة لتأكيد الحذف -->
+  <div class="modal-backdrop" id="customConfirmModal">
+    <div class="modal-content" style="max-width:420px; text-align:center;">
+      <div class="modal-body" style="padding:2rem 1.5rem 1.25rem;">
+        <div class="warning-icon-box">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h3 style="color:var(--primary); font-size:1.25rem; font-weight:900; margin-bottom:0.5rem;" id="confirmModalTitle">تأكيد عملية الحذف</h3>
+        <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1.5rem;" id="confirmModalDesc">
+          هل أنت متأكد من رغبتك في حذف هذا العنصر نهائياً من قاعدة البيانات؟ لن يمكنك التراجع عن هذا الإجراء.
+        </p>
+        <div style="display:flex; justify-content:center; gap:0.75rem;">
+          <button class="btn btn-outline" id="confirmCancelBtn" style="flex:1;">إلغاء وتراجع</button>
+          <button class="btn btn-danger" id="confirmOkBtn" style="flex:1;"><i class="fa-solid fa-trash"></i> نعم، حذف نهائي</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       لوحة التحكم الإدارية
+       ========================================================================== -->
+  <section id="adminOverlay">
+    <div class="admin-topbar">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <strong style="font-size:1.05rem;"><i class="fa-solid fa-gauge-high" style="color:var(--secondary)"></i> منصة إدارة مدرسة الثروات الوطنية</strong>
+        <span class="badge-sub" style="margin:0; background:rgba(255,255,255,0.15); color:#fff;" id="adminDbStatus">
+          <i class="fa-solid fa-shield-halved"></i> الجلسة مؤمنة عبر Firebase
+        </span>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button class="btn btn-outline btn-sm" style="color:#fff; border-color:rgba(255,255,255,0.3);" onclick="document.getElementById('adminOverlay').classList.remove('active')">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> معاينة الموقع
+        </button>
+        <button class="btn btn-danger btn-sm" id="adminLogoutBtn"><i class="fa-solid fa-power-off"></i> خروج آمن</button>
+      </div>
+    </div>
+
+    <div class="admin-body">
+      <aside class="admin-sidebar">
+        <a href="#" class="adm-link active" data-tab="tabDashboard">
+          <div><i class="fa-solid fa-chart-pie"></i> نظرة عامة وإحصائيات</div>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabSettings">
+          <div><i class="fa-solid fa-sliders"></i> الهوية والخريطة والأمان</div>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabSafetyAdmin">
+          <div><i class="fa-solid fa-shield-halved"></i> الأمن والسلامة والتعميمات</div>
+          <span class="adm-link-badge" id="badgeCountSafety">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabAbout">
+          <div><i class="fa-solid fa-landmark"></i> عن المدرسة والرؤية</div>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabAcademics">
+          <div><i class="fa-solid fa-graduation-cap"></i> المراحل والمناهج</div>
+          <span class="adm-link-badge" id="badgeCountAcademics">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabFees">
+          <div><i class="fa-solid fa-receipt"></i> الرسوم (المسار المتقدم)</div>
+          <span class="adm-link-badge" id="badgeCountFees">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabTimetable">
+          <div><i class="fa-solid fa-table-list"></i> جدول الحصص (1-12)</div>
+          <span class="adm-link-badge" id="badgeCountTimetable">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabTransport">
+          <div><i class="fa-solid fa-bus"></i> خدمات ومسارات النقل</div>
+          <span class="adm-link-badge" id="badgeCountTransport">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabNews">
+          <div><i class="fa-solid fa-newspaper"></i> الأخبار والفعاليات</div>
+          <span class="adm-link-badge" id="badgeCountNews">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabCalendar">
+          <div><i class="fa-solid fa-calendar-day"></i> التقويم المدرسي</div>
+          <span class="adm-link-badge" id="badgeCountCalendar">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabJobs">
+          <div><i class="fa-solid fa-briefcase"></i> الوظائف الشاغرة</div>
+          <span class="adm-link-badge" id="badgeCountJobs">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabFiles">
+          <div><i class="fa-solid fa-folder-open"></i> الملفات والروابط</div>
+          <span class="adm-link-badge" id="badgeCountFiles">0</span>
+        </a>
+        <a href="#" class="adm-link" data-tab="tabMessages">
+          <div><i class="fa-solid fa-inbox"></i> الرسائل وطلبات التوظيف</div>
+          <span class="adm-link-badge" style="background:var(--danger); color:#fff;" id="badgeCountMessages">0</span>
+        </a>
+      </aside>
+
+      <main class="admin-main">
+        <!-- 0. الداشبورد -->
+        <div id="tabDashboard" class="adm-pane">
+          <div class="admin-header-strip">
+            <div>
+              <h2 style="font-size:1.4rem; font-weight:900; color:var(--primary);">لوحة المتابعة الشاملة ومؤشرات الأداء</h2>
+              <p style="font-size:0.85rem; color:var(--text-muted);">ملخص لحظي لبيانات مدرسة الثروات الوطنية الخاصة – أبوظبي</p>
+            </div>
+            <div style="font-size:0.85rem; font-weight:700; color:var(--secondary);" id="adminLiveClock"></div>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(10,34,64,0.1); color:var(--primary);"><i class="fa-solid fa-receipt"></i></div>
+              <div class="kpi-data"><h3 id="kpiFees">0</h3><p>صفوف الرسوم المعتمدة</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(197,160,89,0.15); color:var(--secondary);"><i class="fa-solid fa-table-list"></i></div>
+              <div class="kpi-data"><h3 id="kpiSchedules">0</h3><p>حصص الجدول المخصصة</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(2,134,83,0.1); color:var(--accent);"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="kpi-data"><h3 id="kpiSafety">0</h3><p>تعميمات وإرشادات السلامة</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(2,132,199,0.1); color:var(--info);"><i class="fa-solid fa-newspaper"></i></div>
+              <div class="kpi-data"><h3 id="kpiNews">0</h3><p>الأخبار والفعاليات</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(245,158,11,0.1); color:var(--warning);"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="kpi-data"><h3 id="kpiJobs">0</h3><p>الوظائف النشطة</p></div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon" style="background:rgba(220,38,38,0.1); color:var(--danger);"><i class="fa-solid fa-inbox"></i></div>
+              <div class="kpi-data"><h3 id="kpiInquiries">0</h3><p>الرسائل والطلبات</p></div>
+            </div>
+          </div>
+
+          <div class="adm-card">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--primary);"><i class="fa-solid fa-bolt" style="color:var(--secondary)"></i> إجراءات سريعة:</h4>
+            <div style="flex-wrap:wrap; display:flex; gap:8px;">
+              <button class="btn btn-sm btn-outline" onclick="openSectionCrud('safety_circulars')"><i class="fa-solid fa-plus"></i> إضافة تعميم سلامة جديد</button>
+              <button class="btn btn-sm btn-outline" onclick="openSectionCrud('schedules')"><i class="fa-solid fa-plus"></i> إضافة حصة دراسية جديدة</button>
+              <button class="btn btn-sm btn-outline" onclick="openSectionCrud('fees')"><i class="fa-solid fa-plus"></i> إضافة صف ورسوم</button>
+              <button class="btn btn-sm btn-outline" onclick="openSectionCrud('news')"><i class="fa-solid fa-plus"></i> نشر خبر / فعالية</button>
+            </div>
+          </div>
+
+          <div class="adm-card">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--primary);"><i class="fa-solid fa-bell" style="color:var(--secondary)"></i> أحدث الاستفسارات وطلبات النقل الواردة:</h4>
+            <div id="dashboardRecentMessages"></div>
+          </div>
+        </div>
+
+        <!-- 1. إعدادات الهوية والخريطة والأمان عبر Firebase -->
+        <div id="tabSettings" class="adm-pane" style="display:none;">
+          <h2 style="font-size:1.25rem; font-weight:900; margin-bottom:0.75rem; color:var(--primary);">إعدادات الهوية والخريطة وقاعدة بيانات Firebase</h2>
+          
+          <div class="adm-card" style="border: 2px solid var(--accent);">
+            <h4 style="margin-bottom:0.75rem; color:var(--accent); font-size:1rem;">
+              <i class="fa-solid fa-user-shield"></i> بيانات حساب المسؤول في Firebase (مشفرة كلياً)
+            </h4>
+            <form id="adminSecurityForm">
+              <div class="grid-3">
+                <div class="form-group">
+                  <label class="form-label">اسم مستخدم جديد</label>
+                  <input type="text" class="form-control" id="secUsername" required placeholder="أدخل اسم المستخدم" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">كلمة مرور جديدة</label>
+                  <input type="password" class="form-control" id="secPassword" required placeholder="كلمة المرور الجديدة" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">رمز التحقق السري (PIN)</label>
+                  <input type="password" class="form-control" id="secPin" required placeholder="رمز PIN" maxlength="8" autocomplete="off" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-secondary btn-sm"><i class="fa-solid fa-key"></i> تشفير وحفظ في قاعدة بيانات Firebase مباشرة</button>
+            </form>
+          </div>
+
+          <div class="adm-card">
+            <form id="adminSettingsForm">
+              <h4 style="margin-bottom:0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-map-location-dot"></i> تضمين خريطة جوجل التفاعلية للمدرسة (Google Maps)</h4>
+              <div class="form-group">
+                <label class="form-label">رابط تضمين الخريطة (Iframe Embed URL)</label>
+                <input type="text" class="form-control" id="setMapEmbedUrl" required placeholder="https://www.google.com/maps/embed?..." />
+                <span style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">يمكنك نسخه من خرائط جوجل: مشاركة &gt; تضمين خريطة &gt; نسخ رابط src فقط.</span>
+              </div>
+
+              <h4 style="margin:1rem 0 0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-image"></i> الشعار وصورة الواجهة</h4>
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label">رابط شعار المدرسة</label>
+                  <div style="display:flex; gap:6px;">
+                    <input type="url" class="form-control" id="setLogoUrl" required />
+                    <button type="button" class="btn btn-outline btn-sm" onclick="testUrl(document.getElementById('setLogoUrl').value)">معاينة</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">رابط صورة الهيرو</label>
+                  <div style="display:flex; gap:6px;">
+                    <input type="url" class="form-control" id="setHeroImg" required />
+                    <button type="button" class="btn btn-outline btn-sm" onclick="testUrl(document.getElementById('setHeroImg').value)">معاينة</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label">اسم المدرسة الرسمي</label>
+                  <input type="text" class="form-control" id="setSchoolName" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">الاسم الفرعي</label>
+                  <input type="text" class="form-control" id="setSchoolSub" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">عنوان الواجهة الرئيسي</label>
+                <input type="text" class="form-control" id="setHeroTitle" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">النبذة الترحيبية في الواجهة</label>
+                <textarea class="form-control" id="setHeroDesc" rows="3" required></textarea>
+              </div>
+
+              <h4 style="margin:1rem 0 0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-address-book"></i> أرقام التواصل والواتساب</h4>
+              <div class="grid-3">
+                <div class="form-group">
+                  <label class="form-label">رقم الهاتف</label>
+                  <input type="text" class="form-control" id="setPhone" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">رقم الواتساب (بدون +)</label>
+                  <input type="text" class="form-control" id="setWhatsApp" required placeholder="971501234567" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" id="setEmail" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">العنوان الجغرافي</label>
+                <input type="text" class="form-control" id="setAddress" required />
+              </div>
+
+              <h4 style="margin:1rem 0 0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-chart-line"></i> الإحصائيات المعروضة</h4>
+              <div class="grid-4">
+                <div class="form-group">
+                  <label class="form-label">الطلاب</label>
+                  <input type="text" class="form-control" id="setStatStudents" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">الكادر</label>
+                  <input type="text" class="form-control" id="setStatTeachers" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">نسبة النجاح</label>
+                  <input type="text" class="form-control" id="setStatSuccess" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">سنوات العطاء</label>
+                  <input type="text" class="form-control" id="setStatYears" required />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top:0.75rem;"><i class="fa-solid fa-floppy-disk"></i> حفظ وتطبيق الإعدادات والخريطة فوراً</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- 2. إدارة قسم الأمن والسلامة والتعميمات الإرشادية -->
+        <div id="tabSafetyAdmin" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div>
+              <h2 style="font-size:1.25rem; font-weight:800;">إدارة منظومة الأمن والسلامة والتعميمات الرسمية</h2>
+              <p style="font-size:0.82rem; color:var(--text-muted);">إدارة إرشادات أولياء الأمور وتعميمات الطوارئ والسلامة المدرسية</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('safety_circulars')"><i class="fa-solid fa-plus"></i> إضافة تعميم أو إرشاد أمني</button>
+          </div>
+
+          <div class="adm-card">
+            <form id="adminSafetyTextsForm">
+              <div class="form-group">
+                <label class="form-label">عنوان القسم الرئيسي</label>
+                <input type="text" class="form-control" id="setSafetyTitle" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">مقدمة وتوجيهات السلامة المدرسية</label>
+                <textarea class="form-control" id="setSafetyDesc" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> حفظ النصوص التوجيهية</button>
+            </form>
+          </div>
+
+          <h3 style="font-size:1.05rem; font-weight:800; margin:1rem 0; color:var(--primary);">سجل التعميمات والإرشادات الصادرة لأولياء الأمور</h3>
+          <div id="admSafetyCircularsList"></div>
+        </div>
+
+        <!-- 3. عن المدرسة والرؤية -->
+        <div id="tabAbout" class="adm-pane" style="display:none;">
+          <h2 style="font-size:1.2rem; font-weight:800; margin-bottom:1rem;">إدارة نصوص (عن المدرسة والرؤية والرسالة والقيم)</h2>
+          <div class="adm-card">
+            <form id="adminAboutForm">
+              <div class="form-group">
+                <label class="form-label">عنوان قسم عن المدرسة</label>
+                <input type="text" class="form-control" id="setAboutTitle" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">رابط صورة قسم عن المدرسة</label>
+                <div style="display:flex; gap:6px;">
+                  <input type="url" class="form-control" id="setAboutImg" required />
+                  <button type="button" class="btn btn-outline btn-sm" onclick="testUrl(document.getElementById('setAboutImg').value)">معاينة</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">الفقرة الأولى عن المدرسة</label>
+                <textarea class="form-control" id="setAboutDesc1" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">الفقرة الثانية عن المدرسة</label>
+                <textarea class="form-control" id="setAboutDesc2" rows="3" required></textarea>
+              </div>
+
+              <h4 style="margin:1.2rem 0 0.6rem; color:var(--secondary);">الرؤية والرسالة والقيم</h4>
+              <div class="form-group">
+                <label class="form-label">نص الرؤية</label>
+                <textarea class="form-control" id="setVisionText" rows="2" required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">نص الرسالة</label>
+                <textarea class="form-control" id="setMissionText" rows="2" required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">نص القيم الجوهرية</label>
+                <textarea class="form-control" id="setValuesText" rows="2" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> حفظ وتحديث نصوص المدرسة</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- 4. المراحل والمناهج -->
+        <div id="tabAcademics" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في المراحل..." oninput="filterAdminSection('academics', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('academics')"><i class="fa-solid fa-plus"></i> إضافة مرحلة تعليمية</button>
+          </div>
+          <div id="admAcademicsList"></div>
+        </div>
+
+        <!-- 5. الرسوم الدراسية (المسار المتقدم فقط) -->
+        <div id="tabFees" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في صفوف الرسوم..." oninput="filterAdminSection('fees', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('fees')"><i class="fa-solid fa-plus"></i> إضافة صف ورسوم جديدة</button>
+          </div>
+          <div id="admFeesList"></div>
+        </div>
+
+        <!-- 6. جدول الحصص -->
+        <div id="tabTimetable" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث بالصف أو المادة أو المعلم..." oninput="filterAdminSection('schedules', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('schedules')"><i class="fa-solid fa-plus"></i> إضافة حصة دراسية مخصصة</button>
+          </div>
+          <div id="admTTList"></div>
+        </div>
+
+        <!-- 7. مسارات النقل -->
+        <div id="tabTransport" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في المسارات..." oninput="filterAdminSection('transport', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('transport')"><i class="fa-solid fa-plus"></i> إضافة مسار / حافلة جديدة</button>
+          </div>
+          <div id="admTransportList"></div>
+        </div>
+
+        <!-- 8. الأخبار والفعاليات -->
+        <div id="tabNews" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في الأخبار..." oninput="filterAdminSection('news', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('news')"><i class="fa-solid fa-plus"></i> إضافة خبر / فعالية جديدة</button>
+          </div>
+          <div id="admNewsList"></div>
+        </div>
+
+        <!-- 9. التقويم المدرسي -->
+        <div id="tabCalendar" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في التقويم..." oninput="filterAdminSection('calendar', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('calendar')"><i class="fa-solid fa-plus"></i> إضافة مناسبة بالتقويم</button>
+          </div>
+          <div id="admCalList"></div>
+        </div>
+
+        <!-- 10. الوظائف الشاغرة -->
+        <div id="tabJobs" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في الوظائف..." oninput="filterAdminSection('jobs', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('jobs')"><i class="fa-solid fa-plus"></i> نشر وظيفة شاغرة</button>
+          </div>
+          <div id="admJobsList"></div>
+        </div>
+
+        <!-- 11. الملفات والروابط -->
+        <div id="tabFiles" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في الملفات..." oninput="filterAdminSection('files', this.value)" />
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="openSectionCrud('files')"><i class="fa-solid fa-plus"></i> إضافة رابط ملف جديد</button>
+          </div>
+          <div id="admFilesList"></div>
+        </div>
+
+        <!-- 12. الرسائل والطلبات -->
+        <div id="tabMessages" class="adm-pane" style="display:none;">
+          <div class="admin-header-strip">
+            <h2 style="font-size:1.2rem; font-weight:800;">الاستفسارات وطلبات النقل الواردة</h2>
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في الرسائل..." oninput="filterAdminSection('messages', this.value)" />
+            </div>
+          </div>
+          <div id="admMessagesList" style="margin-bottom:2rem;"></div>
+
+          <div class="admin-header-strip">
+            <h3 style="font-size:1.1rem; font-weight:800;">سجل طلبات التوظيف المستلمة عبر واتساب</h3>
+            <div class="admin-search-bar">
+              <i class="fa-solid fa-magnifying-glass" style="color:var(--text-muted)"></i>
+              <input type="text" placeholder="بحث في المتقدمين..." oninput="filterAdminSection('applications', this.value)" />
+            </div>
+          </div>
+          <div id="admAppsList"></div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC & FIREBASE INTEGRATION
+       ========================================================================== -->
+  <script type="module">
+    /* ==========================================================================
+       أولاً: الحماية الصارمة ضد الفحص والتلاعب
+       ========================================================================== */
+    window.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      showToast("الموقع محمي أمنياً: النقر بزر الفأرة الأيمن معطل.", "error");
+      return false;
+    }, true);
+
+    window.addEventListener("keydown", (e) => {
+      const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+      const ctrlKey = isMac ? e.metaKey : e.ctrlKey;
+
+      if (
+        e.key === "F12" ||
+        (ctrlKey && e.shiftKey && ["I", "i", "J", "j", "C", "c", "K", "k"].includes(e.key)) ||
+        (ctrlKey && ["U", "u", "S", "s"].includes(e.key))
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+        showToast("تنبيه أمني: الوصول لأدوات الفحص وكود المصدر محظور.", "error");
+        return false;
+      }
+    }, true);
+
+    window.addEventListener("dragstart", (e) => e.preventDefault());
+
+    // تنظيف النصوص لمنع هجمات XSS
+    function escapeHTML(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    /* ==========================================================================
+       ثانياً: تكوين Firebase Firestore
+       ========================================================================== */
+    const firebaseConfig = {
+      apiKey: "AIzaSyC5BhmzsvG9x0Eioch1csG4YxRKQ-9uMUw",
+      authDomain: "altharawat-private-school.firebaseapp.com",
+      databaseURL: "https://altharawat-private-school-default-rtdb.firebaseio.com",
+      projectId: "altharawat-private-school",
+      storageBucket: "altharawat-private-school.firebasestorage.app",
+      messagingSenderId: "90478060570",
+      appId: "1:90478060570:web:77694d0adc02155d2c9da3"
+    };
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { 
+      getFirestore, 
+      collection, 
+      getDocs, 
+      getDoc,
+      addDoc, 
+      updateDoc, 
+      setDoc, 
+      deleteDoc, 
+      doc 
+    } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    let db = null;
+    let isFirebaseReady = false;
+
+    try {
+      if (firebaseConfig.apiKey && !firebaseConfig.apiKey.includes("DummyKey")) {
+        const app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        isFirebaseReady = true;
+      }
+    } catch (e) {
+      console.warn("تنبيه: قاعدة البيانات بانتظار إدخال مفاتيح Firebase الخاصة بمشروعكم.");
+    }
+
+    /* المخزن العام الافتراضي (خالٍ تماماً من أي حسابات أو كلمات سر - المسار المتقدم فقط) */
+    const INITIAL_STORE = {
+      settings: {
+        logoUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=200&auto=format&fit=crop",
+        heroImg: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1920&auto=format&fit=crop",
+        schoolName: "مدرسة الثروات الوطنية الخاصة",
+        schoolSub: "Al Tharawat National School – TNS",
+        heroTitle: "نبني قادة الغد بتعليم متميز وهوية وطنية راسخة",
+        heroDesc: "أهلاً بكم في مدرسة الثروات الوطنية الخاصة بأبوظبي، حيث يلتقي التميز الأكاديمي بمنهاج وزارة التربية والتعليم الإماراتي المسار المتقدم، مع بيئة تعليمية ذكية ومحفزة على الابتكار والقيم الأصيلة.",
+        phone: "+971 2 582 2222",
+        whatsapp: "971501234567",
+        email: "info@altharawat.sch.ae",
+        address: "دولة الإمارات العربية المتحدة - أبوظبي - منطقة بني ياس شرق",
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14538.718873406213!2d54.6291669!3d24.3168892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e396906233a75%3A0xe5452f4a569d6ee1!2sBani%20Yas%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1700000000000",
+        statStudents: "+1,850",
+        statTeachers: "+130",
+        statSuccess: "100%",
+        statYears: "+25",
+        aboutTitle: "صرح تربوي يصنع أجيال المستقبل",
+        aboutImg: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=900&auto=format&fit=crop",
+        aboutDesc1: "تأسست مدرسة الثروات الوطنية الخاصة في إمارة أبوظبي لتكون منارة تعليمية تسهم بفاعلية في بناء جيل متمسك بهويته الوطنية الإماراتية ومؤهل بالمسار المتقدم.",
+        aboutDesc2: "نطبق منهاج وزارة التربية والتعليم بأعلى المعايير، مع توفير بيئة تعليمية ذكية، ومختبرات علمية متقدمة، ومرافق رياضية متكاملة لجميع الصفوف من الروضة حتى الثاني عشر متقدم.",
+        visionText: "الريادة في تقديم تعليم وطني متقدم يُلهم الطلاب للإبداع، ويُرسخ حب الوطن، ويؤهلهم للمنافسة العالمية باقتدار.",
+        missionText: "توفير بيئة تعليمية آمنة ترتكز على المنهاج الوزاري المتقدم، وتوظيف أحدث وسائل التعلم الذكي بالشراكة مع الأسرة.",
+        valuesText: "الهوية الوطنية • التسامح والتعايش • النزاهة والمسؤولية • الابتكار والتميز • روح الفريق والعمل المشترك.",
+        safetyTitle: "منظومة الأمن والسلامة المدرسية والتعميمات",
+        safetyDesc: "تطبق المدرسة منظومة أمنية متكاملة تشمل رقابة رقمية على مدار الساعة، خطط طوارئ وإخلاء معتمدة، وبروتوكولات صارمة لدخول وخروج الطلبة لضمان بيئة تعليمية آمنة 100%."
+      },
+      academics: [
+        { id: "ac1", title: "رياض الأطفال (KG1 - KG2)", desc: "بيئة استكشافية تعتمد على اللعب الهادف وبناء المهارات اللغوية والحسابية الأولى.", img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop" },
+        { id: "ac2", title: "الحلقة الأولى (الصف 1 - 4)", desc: "تأسيس علمي ولغوي متين في اللغات والرياضيات والعلوم مع غرس الأخلاق والقيم.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" },
+        { id: "ac3", title: "الحلقة الثانية (الصف 5 - 8)", desc: "فصول مستقلة للبنين والبنات مع برامج متقدمة للتفكير النقدي والبحث العلمي والبرمجة.", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" },
+        { id: "ac4", title: "المرحلة الثانوية (المسار المتقدم 9 - 12)", desc: "تركيز مكثف على العلوم المتقدمة، الرياضيات التطبيقية، والتأهيل الكامل لاختبارات EmSAT والقبول في كليات الهندسة والطب.", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" }
+      ],
+      // تم حذف كل صفوف المسار العام والإبقاء على المسار المتقدم فقط للمرحلة الثانوية
+      fees: [
+        { id: "fe1", grade: "روضة أولى (KG1)", tuition: 13800, books: 1200, uniform: 600, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe2", grade: "روضة ثانية (KG2)", tuition: 14500, books: 1300, uniform: 600, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe3", grade: "الصف الأول الابتدائي", tuition: 15800, books: 1600, uniform: 750, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe4", grade: "الصف الثاني الابتدائي", tuition: 16200, books: 1650, uniform: 750, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe5", grade: "الصف الثالث الابتدائي", tuition: 16800, books: 1700, uniform: 750, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe6", grade: "الصف الرابع الابتدائي", tuition: 17500, books: 1800, uniform: 750, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe7", grade: "الصف الخامس", tuition: 18400, books: 2000, uniform: 850, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe8", grade: "الصف السادس", tuition: 19100, books: 2100, uniform: 850, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe9", grade: "الصف السابع", tuition: 19800, books: 2200, uniform: 850, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe10", grade: "الصف الثامن", tuition: 20500, books: 2300, uniform: 850, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe11", grade: "الصف التاسع (المسار المتقدم)", tuition: 22200, books: 2600, uniform: 900, transport: 3800, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe12", grade: "الصف العاشر (المسار المتقدم)", tuition: 23600, books: 2750, uniform: 900, transport: 3800, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe13", grade: "الصف الحادي عشر (المسار المتقدم)", tuition: 25100, books: 2950, uniform: 950, transport: 3800, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
+        { id: "fe14", grade: "الصف الثاني عشر (المسار المتقدم)", tuition: 26900, books: 3100, uniform: 950, transport: 3800, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" }
+      ],
+      safety_circulars: [
+        { id: "saf1", title: "تعميم رقم (1): مواعيد فتح البوابات واستلام الطلبة", date: "2026-03-01", desc: "تفتح البوابات المدرسية يومياً الساعة 07:15 صباحاً وتغلق تمام 07:45 صباحاً حرصاً على الانضباط، ولن يتم تسليم أي طالب إلا بإبراز بطاقة الاستلام الرسمية." },
+        { id: "saf2", title: "إرشادات السلامة المرورية والسرعة أمام الحرم المدرسي", date: "2026-02-15", desc: "يرجى من السادة أولياء الأمور عدم التوقف المزدوج نهائياً، والالتزام بمسار النزول المحدد حفاظاً على أرواح أبنائنا، والالتزام بالسرعة 20 كم/ساعة." },
+        { id: "saf3", title: "خطة التعامل مع الضباب وتقلبات الطقس المعتمدة", date: "2026-01-20", desc: "في حال إصدار المركز الوطني للأرصاد تنبيهاً بالضباب الكثيف أو الأمطار الغزيرة، يُرجى متابعة الرسائل النصية القصيرة لاعتماد آلية التعلم الذكي عن بعد." }
+      ],
+      schedules: [
+        { id: "sch_1", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 1, period: "الحصة 1", time: "08:00 - 08:45", subject: "اللغة العربية", teacher: "أ. فاطمة الظاهري", teacherPhone: "971501112233", room: "قاعة 201" },
+        { id: "sch_2", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 2, period: "الحصة 2", time: "08:50 - 09:35", subject: "الرياضيات المتقدمة", teacher: "أ. عبد الله المهيري", teacherPhone: "971502223344", room: "قاعة 201" },
+        { id: "sch_3", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 3, period: "الحصة 3", time: "09:40 - 10:25", subject: "الفيزياء المتقدمة", teacher: "د. خالد السعدي", teacherPhone: "971504445566", room: "المختبر العلمي" }
+      ],
+      transport: [
+        { id: "tr1", zone: "بني ياس (شرق وغرب)", busNo: "حافلة 01 و 02", supervisor: "أ. أمينة الكعبي (0501112233)", time: "الصباح: 06:45 ص | الظهيرة: 02:15 م" },
+        { id: "tr2", zone: "الشامخة والشوامخ", busNo: "حافلة 03 و 04", supervisor: "أ. نورة المنصوري (0502223344)", time: "الصباح: 06:40 ص | الظهيرة: 02:20 م" },
+        { id: "tr3", zone: "الفلاح والمفرق والوثبة", busNo: "حافلة 05", supervisor: "أ. مريم الحوسني (0503334455)", time: "الصباح: 06:30 ص | الظهيرة: 02:30 م" }
+      ],
+      news: [
+        { id: "n1", title: "انطلاق أسبوع الابتكار والذكاء الاصطناعي للمسار المتقدم", category: "فعاليات", date: "2026-03-10", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop", desc: "نظمت المدرسة معرض الابتكار مستعرضة إبداعات طلاب المسار المتقدم في الروبوتات والذكاء الاصطناعي." },
+        { id: "n2", title: "فتح باب التسجيل والقبول للعام الدراسي 2026 - 2027", category: "إعلانات", date: "2026-03-01", image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop", desc: "يسر قسم القبول والتسجيل استقبال طلبات الالتحاق لجميع المراحل الدراسية للمسار المتقدم مع توفير خصومات الأخوة." }
+      ],
+      calendar: [
+        { id: "c1", title: "بداية الفصل الدراسي الثالث", date: "2026-04-13", cat: "أكاديمي" },
+        { id: "c2", title: "إجازة عيد الفطر المبارك المتوقعة", date: "2026-03-20", cat: "إجازات" },
+        { id: "c3", title: "امتحانات نهاية العام الدراسي (المتقدم)", date: "2026-06-08", cat: "اختبارات" }
+      ],
+      jobs: [
+        { id: "j1", title: "معلم / معلمة رياضيات للمسار المتقدم", dept: "قسم الرياضيات", type: "دوام كامل", exp: "خبرة لا تقل عن 4 سنوات في مناهج الدولة واختبارات EmSAT", qual: "بكالوريوس رياضيات أو هندسة + دبلوم تأهيل تربوي" },
+        { id: "j2", title: "معلم فيزياء وكيمياء متقدم", dept: "قسم العلوم", type: "دوام كامل", exp: "خبرة 4 سنوات في منهاج الوزارة المتقدم", qual: "بكالوريوس علوم فيزياء أو كيمياء + إجادة تقنيات التعلم الذكي" }
+      ],
+      files: [
+        { id: "f1", title: "دليل الطالب واللوائح السلوكية المعتمدة 2026", category: "أدلة ولوائح", url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
+        { id: "f2", title: "دليل أولياء الأمور لإجراءات الأمن والسلامة المدرسية", category: "أمن وسلامة", url: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" }
+      ],
+      applications: [],
+      messages: []
+    };
+
+    function getLocal(key) {
+      const v = localStorage.getItem("TNS_PRO_" + key);
+      if (v) {
+        try { return JSON.parse(v); } catch(e) { return INITIAL_STORE[key]; }
+      }
+      return INITIAL_STORE[key];
+    }
+    function setLocal(key, data) {
+      localStorage.setItem("TNS_PRO_" + key, JSON.stringify(data));
+    }
+
+    async function loadData(name) {
+      if (isFirebaseReady && db) {
+        try {
+          const snap = await getDocs(collection(db, name));
+          const list = [];
+          snap.forEach(d => list.push({ id: d.id, ...d.data() }));
+          if (list.length > 0) return list;
+        } catch(e) {}
+      }
+      return getLocal(name);
+    }
+
+    async function saveData(name, item) {
+      if (isFirebaseReady && db) {
+        try {
+          if (item.id && !String(item.id).startsWith("local_")) {
+            await updateDoc(doc(db, name, String(item.id)), item);
+          } else {
+            const ref = await addDoc(collection(db, name), item);
+            item.id = ref.id;
+          }
+        } catch(e) {}
+      }
+      
+      let list = getLocal(name);
+      if (!Array.isArray(list)) list = [];
+      
+      if (item.id) {
+        const idx = list.findIndex(i => String(i.id) === String(item.id));
+        if (idx !== -1) {
+          list[idx] = { ...list[idx], ...item };
+        } else {
+          list.unshift(item);
+        }
+      } else {
+        item.id = "local_" + Date.now();
+        list.unshift(item);
+      }
+      setLocal(name, list);
+      return item;
+    }
+
+    async function removeData(name, id) {
+      if (isFirebaseReady && db) {
+        try {
+          if (!String(id).startsWith("local_")) {
+            await deleteDoc(doc(db, name, String(id)));
+          }
+        } catch(e) {}
+      }
+      let list = getLocal(name);
+      if (Array.isArray(list)) {
+        list = list.filter(i => String(i.id) !== String(id));
+        setLocal(name, list);
+      }
+    }
+
+    /* التنبيهات وإدارة المودال */
+    window.showToast = function(msg, type = "info") {
+      const c = document.getElementById("toastContainer");
+      const t = document.createElement("div");
+      t.className = `toast ${type}`;
+      const icon = type === "success" ? "fa-circle-check" : type === "error" ? "fa-circle-exclamation" : "fa-circle-info";
+      t.innerHTML = `<i class="fa-solid ${icon}"></i> <span>${escapeHTML(msg)}</span>`;
+      c.appendChild(t);
+      setTimeout(() => {
+        t.style.opacity = "0";
+        setTimeout(() => t.remove(), 250);
+      }, 3500);
+    };
+
+    window.openModal = function(id) { 
+      const m = document.getElementById(id); 
+      if (m) m.classList.add("show"); 
+    };
+    window.closeModal = function(id) { 
+      const m = document.getElementById(id); 
+      if (m) m.classList.remove("show"); 
+    };
+
+    window.testUrl = function(url) {
+      if (!url || !url.startsWith("http")) {
+        showToast("يرجى إدخال رابط صالح يبدأ بـ http:// أو https://", "error");
+        return;
+      }
+      window.open(url, "_blank");
+    };
+
+    // الوضع الليلي
+    const themeBtn = document.getElementById("themeBtn");
+    let currentTheme = localStorage.getItem("TNS_THEME") || "light";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    themeBtn.innerHTML = currentTheme === "light" ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+    themeBtn.addEventListener("click", () => {
+      currentTheme = currentTheme === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", currentTheme);
+      localStorage.setItem("TNS_THEME", currentTheme);
+      themeBtn.innerHTML = currentTheme === "light" ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+    });
+
+    // القائمة الجانبية للهاتف
+    const openDrawerBtn = document.getElementById("openDrawerBtn");
+    const closeDrawerBtn = document.getElementById("closeDrawerBtn");
+    const drawer = document.getElementById("mobileDrawer");
+    const overlay = document.getElementById("drawerOverlay");
+    function setDrawer(open) {
+      if (open) { drawer.classList.add("open"); overlay.classList.add("active"); }
+      else { drawer.classList.remove("open"); overlay.classList.remove("active"); }
+    }
+    openDrawerBtn.addEventListener("click", () => setDrawer(true));
+    closeDrawerBtn.addEventListener("click", () => setDrawer(false));
+    overlay.addEventListener("click", () => setDrawer(false));
+    document.querySelectorAll(".drawer-link").forEach(l => l.addEventListener("click", () => setDrawer(false)));
+
+    // نافذة تأكيد الحذف
+    let confirmCallback = null;
+    window.customConfirm = function(title, message, onConfirm) {
+      document.getElementById("confirmModalTitle").textContent = title || "تأكيد عملية الحذف";
+      document.getElementById("confirmModalDesc").textContent = message || "هل أنت متأكد من رغبتك في حذف هذا العنصر نهائياً؟";
+      confirmCallback = onConfirm;
+      openModal("customConfirmModal");
+    };
+    document.getElementById("confirmOkBtn").addEventListener("click", async () => {
+      if (confirmCallback) {
+        await confirmCallback();
+        confirmCallback = null;
+      }
+      closeModal("customConfirmModal");
+    });
+    document.getElementById("confirmCancelBtn").addEventListener("click", () => {
+      confirmCallback = null;
+      closeModal("customConfirmModal");
+    });
+
+    window.confirmDelete = function(col, id) {
+      customConfirm("تأكيد حذف العنصر", "هل أنت متأكد من رغبتك في حذف هذا السجل نهائياً من قاعدة البيانات؟", async () => {
+        await removeData(col, id);
+        await renderAllAdminPanels();
+        await renderAllPublicViews();
+        showToast("تم الحذف بنجاح من قاعدة البيانات", "success");
+      });
+    };
+
+    /* ==========================================================================
+       ثالثاً: إدارة الأمان والتحقق من حسابات الأدمن في Firebase حصرياً
+       ========================================================================== */
+    async function getSecureAdminAuth() {
+      if (isFirebaseReady && db) {
+        try {
+          const docRef = doc(db, "system_security", "admin_credentials");
+          const snap = await getDoc(docRef);
+          if (snap.exists()) {
+            return snap.data();
+          }
+        } catch (e) {
+          console.warn("تعذر استرجاع بيانات الأمان من Firebase:", e);
+        }
+      }
+      // تخزين احتياطي في LocalStorage للجلسات غير المتصلة
+      const localSecure = localStorage.getItem("TNS_SEC_AUTH");
+      if (localSecure) {
+        try { return JSON.parse(localSecure); } catch(e) {}
+      }
+      return null;
+    }
+
+    async function setSecureAdminAuth(usernameHash, passHash, pinHash) {
+      const authData = {
+        usernameHash,
+        passwordHash: passHash,
+        pinHash,
+        updatedAt: new Date().toISOString()
+      };
+
+      if (isFirebaseReady && db) {
+        try {
+          await setDoc(doc(db, "system_security", "admin_credentials"), authData);
+        } catch (e) {
+          console.error("فشل حفظ بيانات الأدمن في Firebase:", e);
+        }
+      }
+      localStorage.setItem("TNS_SEC_AUTH", JSON.stringify(authData));
+    }
+
+    // تطبيق وتحديث إعدادات الموقع العامة
+    async function applyDynamicSettings() {
+      let s = getLocal("settings");
+      if (isFirebaseReady && db) {
+        try {
+          const snap = await getDocs(collection(db, "settings"));
+          snap.forEach(d => { if (d.id === "general") s = d.data(); });
+        } catch(e) {}
+      }
+
+      document.getElementById("navLogoImg").src = s.logoUrl;
+      document.getElementById("footerLogoImg").src = s.logoUrl;
+      document.getElementById("navSchoolName").textContent = s.schoolName;
+      document.getElementById("footerSchoolName").textContent = s.schoolName;
+      document.getElementById("navSchoolSub").textContent = s.schoolSub;
+
+      document.getElementById("home").style.backgroundImage = `url('${s.heroImg}')`;
+      document.getElementById("heroTitle").textContent = s.heroTitle;
+      document.getElementById("heroDesc").textContent = s.heroDesc;
+
+      document.getElementById("statStudents").textContent = s.statStudents;
+      document.getElementById("statTeachers").textContent = s.statTeachers;
+      document.getElementById("statSuccess").textContent = s.statSuccess;
+      document.getElementById("statYears").textContent = s.statYears;
+
+      document.getElementById("contactPhone").textContent = s.phone;
+      document.getElementById("contactWhatsApp").textContent = "+" + s.whatsapp;
+      document.getElementById("contactEmail").textContent = s.email;
+      document.getElementById("contactAddress").textContent = s.address;
+
+      if (s.mapEmbedUrl) {
+        document.getElementById("schoolGoogleMapFrame").src = s.mapEmbedUrl;
+        document.getElementById("setMapEmbedUrl").value = s.mapEmbedUrl;
+      }
+
+      const cleanWA = s.whatsapp.replace(/[^0-9]/g, '');
+      document.getElementById("directWhatsAppBtn").href = `https://wa.me/${cleanWA}?text=${encodeURIComponent('السلام عليكم ورحمة الله، أود الاستفسار عن مدرسة الثروات الوطنية.')}`;
+
+      document.getElementById("pubAboutTitle").textContent = s.aboutTitle || "";
+      document.getElementById("pubAboutDesc1").textContent = s.aboutDesc1 || "";
+      document.getElementById("pubAboutDesc2").textContent = s.aboutDesc2 || "";
+      document.getElementById("pubAboutImg").src = s.aboutImg || "";
+
+      document.getElementById("pubVisionText").textContent = s.visionText || "";
+      document.getElementById("pubMissionText").textContent = s.missionText || "";
+      document.getElementById("pubValuesText").textContent = s.valuesText || "";
+
+      document.getElementById("pubSafetyTitle").textContent = s.safetyTitle || "منظومة الأمن والسلامة المدرسية والتعميمات";
+      document.getElementById("pubSafetyDesc").textContent = s.safetyDesc || "";
+
+      // تعبئة حقول لوحة التحكم
+      document.getElementById("setLogoUrl").value = s.logoUrl;
+      document.getElementById("setHeroImg").value = s.heroImg;
+      document.getElementById("setSchoolName").value = s.schoolName;
+      document.getElementById("setSchoolSub").value = s.schoolSub;
+      document.getElementById("setHeroTitle").value = s.heroTitle;
+      document.getElementById("setHeroDesc").value = s.heroDesc;
+      document.getElementById("setPhone").value = s.phone;
+      document.getElementById("setWhatsApp").value = s.whatsapp;
+      document.getElementById("setEmail").value = s.email;
+      document.getElementById("setAddress").value = s.address;
+      document.getElementById("setStatStudents").value = s.statStudents;
+      document.getElementById("setStatTeachers").value = s.statTeachers;
+      document.getElementById("setStatSuccess").value = s.statSuccess;
+      document.getElementById("setStatYears").value = s.statYears;
+
+      document.getElementById("setAboutTitle").value = s.aboutTitle || "";
+      document.getElementById("setAboutImg").value = s.aboutImg || "";
+      document.getElementById("setAboutDesc1").value = s.aboutDesc1 || "";
+      document.getElementById("setAboutDesc2").value = s.aboutDesc2 || "";
+      document.getElementById("setVisionText").value = s.visionText || "";
+      document.getElementById("setMissionText").value = s.missionText || "";
+      document.getElementById("setValuesText").value = s.valuesText || "";
+
+      document.getElementById("setSafetyTitle").value = s.safetyTitle || "";
+      document.getElementById("setSafetyDesc").value = s.safetyDesc || "";
+    }
+
+    document.getElementById("adminSettingsForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const current = getLocal("settings");
+      const s = {
+        ...current,
+        logoUrl: document.getElementById("setLogoUrl").value,
+        heroImg: document.getElementById("setHeroImg").value,
+        schoolName: document.getElementById("setSchoolName").value,
+        schoolSub: document.getElementById("setSchoolSub").value,
+        heroTitle: document.getElementById("setHeroTitle").value,
+        heroDesc: document.getElementById("setHeroDesc").value,
+        phone: document.getElementById("setPhone").value,
+        whatsapp: document.getElementById("setWhatsApp").value,
+        email: document.getElementById("setEmail").value,
+        address: document.getElementById("setAddress").value,
+        mapEmbedUrl: document.getElementById("setMapEmbedUrl").value,
+        statStudents: document.getElementById("setStatStudents").value,
+        statTeachers: document.getElementById("setStatTeachers").value,
+        statSuccess: document.getElementById("setStatSuccess").value,
+        statYears: document.getElementById("setStatYears").value
+      };
+      setLocal("settings", s);
+      if (isFirebaseReady && db) {
+        try { await setDoc(doc(db, "settings", "general"), s); } catch(err) {}
+      }
+      await applyDynamicSettings();
+      showToast("تم تحديث هوية المدرسة والخريطة بنجاح!", "success");
+    });
+
+    document.getElementById("adminSafetyTextsForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const current = getLocal("settings");
+      const s = {
+        ...current,
+        safetyTitle: document.getElementById("setSafetyTitle").value,
+        safetyDesc: document.getElementById("setSafetyDesc").value
+      };
+      setLocal("settings", s);
+      if (isFirebaseReady && db) {
+        try { await setDoc(doc(db, "settings", "general"), s); } catch(err) {}
+      }
+      await applyDynamicSettings();
+      showToast("تم تحديث نصوص الأمن والسلامة بنجاح!", "success");
+    });
+
+    document.getElementById("adminAboutForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const current = getLocal("settings");
+      const s = {
+        ...current,
+        aboutTitle: document.getElementById("setAboutTitle").value,
+        aboutImg: document.getElementById("setAboutImg").value,
+        aboutDesc1: document.getElementById("setAboutDesc1").value,
+        aboutDesc2: document.getElementById("setAboutDesc2").value,
+        visionText: document.getElementById("setVisionText").value,
+        missionText: document.getElementById("setMissionText").value,
+        valuesText: document.getElementById("setValuesText").value
+      };
+      setLocal("settings", s);
+      if (isFirebaseReady && db) {
+        try { await setDoc(doc(db, "settings", "general"), s); } catch(err) {}
+      }
+      await applyDynamicSettings();
+      showToast("تم تحديث نصوص عن المدرسة والرؤية والرسالة بنجاح!", "success");
+    });
+
+    // تحديث وتشفير بيانات اعتماد حساب المسؤول في Firebase
+    document.getElementById("adminSecurityForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const newU = document.getElementById("secUsername").value.trim();
+      const newP = document.getElementById("secPassword").value.trim();
+      const newPin = document.getElementById("secPin").value.trim();
+
+      if (!newU || !newP || !newPin) {
+        showToast("يرجى ملء كافة حقول الأمان", "error");
+        return;
+      }
+
+      const uHash = await sha256(newU);
+      const pHash = await sha256(newP);
+      const pinHash = await sha256(newPin);
+
+      await setSecureAdminAuth(uHash, pHash, pinHash);
+
+      showToast("تم تحديث بيانات اعتماد الحساب في Firebase بنجاح تام!", "success");
+      document.getElementById("secPassword").value = "";
+      document.getElementById("secPin").value = "";
+    });
+
+    /* ==========================================================================
+       رابعاً: تسجيل دخول الإدارة المؤمّن من خلال أيقونة الفوتر السرية فقط
+       ========================================================================== */
+    const adminOverlay = document.getElementById("adminOverlay");
+    let tempAuthCheck = null;
+
+    function resetAdminLoginForm() {
+      document.getElementById("adminStep1Form").style.display = "block";
+      document.getElementById("adminStep2Form").style.display = "none";
+      document.getElementById("loginStepTitle").innerHTML = `<i class="fa-solid fa-shield-halved" style="color:var(--secondary)"></i> التحقق الأمني السحابي`;
+      document.getElementById("admUser").value = "";
+      document.getElementById("admPass").value = "";
+      document.getElementById("admPin").value = "";
+      tempAuthCheck = null;
+    }
+
+    // الزناد الوحيد لفتح لوحة الإدارة هو الأيقونة السرية بالفوتر
+    document.getElementById("secretAdminTrigger").addEventListener("click", () => {
+      resetAdminLoginForm();
+      openModal("adminLoginModal");
+    });
+
+    // خطوة التحقق الأولى: اسم المستخدم وكلمة المرور
+    document.getElementById("adminStep1Form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const u = document.getElementById("admUser").value.trim();
+      const p = document.getElementById("admPass").value.trim();
+
+      const btn = document.getElementById("btnStep1Submit");
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> جاري التحقق من Firebase...`;
+
+      try {
+        const adminAuth = await getSecureAdminAuth();
+        const inputUHash = await sha256(u);
+        const inputPHash = await sha256(p);
+
+        // في حال كانت قاعدة البيانات جديدة تماماً ولم يتم تأسيس حساب بعد
+        if (!adminAuth) {
+          showToast("تم اكتشاف جلسة التأسيس الأولى. يرجى إدخال رمز PIN لإتمام التسجيل الأمني في Firebase.", "info");
+          tempAuthCheck = { firstSetup: true, uHash: inputUHash, pHash: inputPHash };
+          document.getElementById("adminStep1Form").style.display = "none";
+          document.getElementById("adminStep2Form").style.display = "block";
+          document.getElementById("loginStepTitle").innerHTML = `<i class="fa-solid fa-key" style="color:var(--accent)"></i> تعيين رمز PIN الأول`;
+          document.getElementById("admPin").focus();
+          return;
+        }
+
+        if (adminAuth.usernameHash === inputUHash && adminAuth.passwordHash === inputPHash) {
+          tempAuthCheck = { adminAuth };
+          document.getElementById("adminStep1Form").style.display = "none";
+          document.getElementById("adminStep2Form").style.display = "block";
+          document.getElementById("loginStepTitle").innerHTML = `<i class="fa-solid fa-key" style="color:var(--accent)"></i> التحقق الأمني السري (PIN)`;
+          document.getElementById("admPin").focus();
+          showToast("البيانات صحيحة. يرجى إدخال رمز التحقق الأمني PIN.", "info");
+        } else {
+          showToast("بيانات الدخول غير صحيحة!", "error");
+        }
+      } catch (err) {
+        showToast("حدث خطأ أثناء المصادقة مع Firebase", "error");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `متابعة للتحقق <i class="fa-solid fa-arrow-left"></i>`;
+      }
+    });
+
+    document.getElementById("backToStep1Btn").addEventListener("click", () => resetAdminLoginForm());
+
+    // خطوة التحقق الثانية: رمز PIN
+    document.getElementById("adminStep2Form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const pin = document.getElementById("admPin").value.trim();
+      const inputPinHash = await sha256(pin);
+
+      const btn = document.getElementById("btnStep2Submit");
+      btn.disabled = true;
+
+      try {
+        if (tempAuthCheck && tempAuthCheck.firstSetup) {
+          await setSecureAdminAuth(tempAuthCheck.uHash, tempAuthCheck.pHash, inputPinHash);
+          sessionStorage.setItem("TNS_ADMIN_AUTH", "true");
+          closeModal("adminLoginModal");
+          adminOverlay.classList.add("active");
+          renderAllAdminPanels();
+          showToast("تم حفظ حساب الإدارة الأول في Firebase بنجاح!", "success");
+          resetAdminLoginForm();
+          return;
+        }
+
+        if (tempAuthCheck && tempAuthCheck.adminAuth && tempAuthCheck.adminAuth.pinHash === inputPinHash) {
+          sessionStorage.setItem("TNS_ADMIN_AUTH", "true");
+          closeModal("adminLoginModal");
+          adminOverlay.classList.add("active");
+          renderAllAdminPanels();
+          showToast("تم التحقق بنجاح. مرحباً بك في لوحة الإدارة.", "success");
+          resetAdminLoginForm();
+        } else {
+          showToast("رمز التحقق السري PIN غير صحيح!", "error");
+        }
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById("adminLogoutBtn").addEventListener("click", () => {
+      sessionStorage.removeItem("TNS_ADMIN_AUTH");
+      adminOverlay.classList.remove("active");
+      showToast("تم تسجيل الخروج بنجاح وإغلاق الجلسة الآمنة", "info");
+    });
+
+    // تبويبات لوحة التحكم
+    document.querySelectorAll(".adm-link").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelectorAll(".adm-link").forEach(l => l.classList.remove("active"));
+        document.querySelectorAll(".adm-pane").forEach(p => p.style.display = "none");
+        link.classList.add("active");
+        const tid = link.getAttribute("data-tab");
+        const pane = document.getElementById(tid);
+        if (pane) pane.style.display = "block";
+      });
+    });
+
+    /* ==========================================================================
+       خامساً: محرك توليد الحقول والنماذج الديناميكي
+       ========================================================================== */
+    const GRADES_LIST = [
+      "الصف الأول", "الصف الثاني", "الصف الثالث", "الصف الرابع",
+      "الصف الخامس", "الصف السادس", "الصف السابع", "الصف الثامن",
+      "الصف التاسع (متقدم)", "الصف العاشر (متقدم)", "الصف الحادي عشر (متقدم)", "الصف الثاني عشر (متقدم)"
+    ];
+
+    const SECTIONS_LIST = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    const DAYS_LIST = ["الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"];
+    const PERIODS_LIST = [
+      { name: "الحصة 1", time: "08:00 - 08:45" },
+      { name: "الحصة 2", time: "08:50 - 09:35" },
+      { name: "الحصة 3", time: "09:40 - 10:25" },
+      { name: "الحصة 4", time: "10:55 - 11:40" },
+      { name: "الحصة 5", time: "11:45 - 12:30" },
+      { name: "الحصة 6", time: "12:35 - 01:20" },
+      { name: "الحصة 7", time: "01:25 - 02:10" }
+    ];
+
+    const SECTION_SCHEMAS = {
+      safety_circulars: {
+        title: "تعميمات وإرشادات الأمن والسلامة",
+        fields: [
+          { id: "title", label: "عنوان التعميم أو الإرشاد", type: "text", required: true, placeholder: "مثال: تعميم بخصوص استلام الطلبة..." },
+          { id: "date", label: "تاريخ التعميم", type: "date", required: true },
+          { id: "desc", label: "نص وتفاصيل التعميم لأولياء الأمور", type: "textarea", required: true }
+        ]
+      },
+      academics: {
+        title: "المراحل التعليمية",
+        fields: [
+          { id: "title", label: "اسم المرحلة", type: "text", required: true, placeholder: "مثال: المرحلة الثانوية (المسار المتقدم)" },
+          { id: "desc", label: "وصف ومميزات المرحلة", type: "textarea", required: true, placeholder: "اكتب نبذة عن المنهج..." },
+          { id: "img", label: "رابط صورة المرحلة (Image URL)", type: "url", required: true, testable: true, placeholder: "https://..." }
+        ]
+      },
+      fees: {
+        title: "الرسوم الدراسية للصفوف (المسار المتقدم)",
+        fields: [
+          { id: "grade", label: "الصف الدراسي", type: "text", required: true, placeholder: "مثال: الصف التاسع (المسار المتقدم)" },
+          { id: "tuition", label: "الرسوم الدراسية السنوية الأساسية (د.إ)", type: "number", required: true },
+          { id: "books", label: "رسوم الكتب المدرسية (د.إ)", type: "number", required: true },
+          { id: "uniform", label: "رسوم الزي المدرسي الرسمي (د.إ)", type: "number", required: true },
+          { id: "transport", label: "رسوم النقل المدرسي (د.إ)", type: "number", required: true },
+          { id: "plan", label: "خطة الأقساط ومواعيد الدفع", type: "text", required: true, default: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" }
+        ]
+      },
+      schedules: {
+        title: "جدول الحصص الدراسية والتواصل مع المعلم",
+        fields: [
+          { id: "grade", label: "الصف الدراسي", type: "select", required: true, options: GRADES_LIST },
+          { id: "section", label: "الشعبة (1 - 10)", type: "select", required: true, options: SECTIONS_LIST },
+          { id: "day", label: "اليوم (من الإثنين إلى الجمعة)", type: "select", required: true, options: DAYS_LIST },
+          { id: "periodIndex", label: "رقم الحصة", type: "select", required: true, options: ["1", "2", "3", "4", "5", "6", "7"] },
+          { id: "time", label: "توقيت الحصة", type: "text", required: true, default: "08:00 - 08:45" },
+          { id: "subject", label: "المادة الدراسية", type: "text", required: true, placeholder: "اللغة العربية / الرياضيات المتقدمة / الفيزياء..." },
+          { id: "teacher", label: "اسم المعلم", type: "text", required: true, placeholder: "أ. عبد الله المهيري" },
+          { id: "teacherPhone", label: "رقم واتساب المعلم للتواصل المباشر (مع كود الدولة بدون +)", type: "text", required: true, placeholder: "971501234567" },
+          { id: "room", label: "القاعة / المختبر", type: "text", required: true, default: "قاعة 201" }
+        ]
+      },
+      transport: {
+        title: "مسارات النقل والمناطق",
+        fields: [
+          { id: "zone", label: "اسم المنطقة أو المسار", type: "text", required: true, placeholder: "مثال: بني ياس (شرق وغرب)" },
+          { id: "busNo", label: "أرقام الحافلات المخصصة", type: "text", required: true, placeholder: "حافلة 01 و 02" },
+          { id: "supervisor", label: "اسم المشرفة ورقم التواصل", type: "text", required: true, placeholder: "أ. فاطمة (050xxxxxxx)" },
+          { id: "time", label: "توقيت الجولات الصباحية والمسائية", type: "text", required: true, placeholder: "الصباح: 06:45 ص | الظهيرة: 02:15 م" }
+        ]
+      },
+      news: {
+        title: "الأخبار والفعاليات والإعلانات",
+        fields: [
+          { id: "title", label: "عنوان الخبر أو الفعالية", type: "text", required: true },
+          { id: "category", label: "التصنيف", type: "select", required: true, options: ["أخبار", "فعاليات", "إعلانات"] },
+          { id: "date", label: "التاريخ", type: "date", required: true },
+          { id: "image", label: "رابط صورة الغلاف (Image URL)", type: "url", required: true, testable: true },
+          { id: "desc", label: "التفاصيل والنص الكامل", type: "textarea", required: true }
+        ]
+      },
+      calendar: {
+        title: "التقويم المدرسي",
+        fields: [
+          { id: "title", label: "اسم المناسبة أو الحدث", type: "text", required: true },
+          { id: "date", label: "التاريخ", type: "date", required: true },
+          { id: "cat", label: "التصنيف", type: "select", required: true, options: ["أكاديمي", "إجازات", "اختبارات", "فعاليات"] }
+        ]
+      },
+      jobs: {
+        title: "الوظائف الشاغرة",
+        fields: [
+          { id: "title", label: "المسمى الوظيفي", type: "text", required: true },
+          { id: "dept", label: "القسم الأكاديمي / الإداري", type: "text", required: true },
+          { id: "type", label: "نوع الدوام", type: "select", required: true, options: ["دوام كامل", "دوام جزئي"] },
+          { id: "exp", label: "سنوات الخبرة المطلوبة", type: "text", required: true },
+          { id: "qual", label: "المؤهلات والشروط المطلوبة", type: "text", required: true }
+        ]
+      },
+      files: {
+        title: "الملفات والنماذج",
+        fields: [
+          { id: "title", label: "اسم الملف أو النموذج", type: "text", required: true },
+          { id: "category", label: "التصنيف", type: "text", required: true, placeholder: "أدلة ولوائح / نماذج تسجيل..." },
+          { id: "url", label: "الرابط المباشر للتنزيل (Direct URL)", type: "url", required: true, testable: true }
+        ]
+      }
+    };
+
+    window.openSectionCrud = async function(sectionKey, itemId = null) {
+      const schema = SECTION_SCHEMAS[sectionKey];
+      if (!schema) return;
+
+      document.getElementById("dynSectionKey").value = sectionKey;
+      document.getElementById("dynEditId").value = itemId || "";
+      document.getElementById("dynModalTitle").innerHTML = itemId 
+        ? `<i class="fa-solid fa-pen-to-square" style="color:var(--secondary)"></i> تعديل: ${schema.title}` 
+        : `<i class="fa-solid fa-circle-plus" style="color:var(--secondary)"></i> إضافة جديدة إلى: ${schema.title}`;
+
+      let currentItem = null;
+      if (itemId) {
+        const list = await loadData(sectionKey);
+        currentItem = list.find(i => String(i.id) === String(itemId));
+      }
+
+      const body = document.getElementById("dynModalBody");
+      body.innerHTML = "";
+
+      schema.fields.forEach(f => {
+        const val = (currentItem && currentItem[f.id] !== undefined) 
+          ? currentItem[f.id] 
+          : (f.default !== undefined ? f.default : "");
+
+        const group = document.createElement("div");
+        group.className = "form-group";
+
+        let inputHtml = "";
+        if (f.type === "textarea") {
+          inputHtml = `<textarea class="form-control" id="df_${f.id}" rows="3" ${f.required ? 'required' : ''} placeholder="${f.placeholder || ''}">${escapeHTML(val)}</textarea>`;
+        } else if (f.type === "select") {
+          const opts = f.options.map(opt => `<option value="${opt}" ${String(val) === String(opt) ? 'selected' : ''}>${opt}</option>`).join("");
+          inputHtml = `<select class="form-control" id="df_${f.id}" ${f.required ? 'required' : ''}>${opts}</select>`;
+        } else if (f.type === "url" && f.testable) {
+          inputHtml = `
+            <div style="display:flex; gap:6px;">
+              <input type="url" class="form-control" id="df_${f.id}" value="${escapeHTML(val)}" ${f.required ? 'required' : ''} placeholder="${f.placeholder || 'https://...'}" />
+              <button type="button" class="btn btn-outline btn-sm" onclick="testUrl(document.getElementById('df_${f.id}').value)">اختبار</button>
+            </div>
+          `;
+        } else {
+          inputHtml = `<input type="${f.type}" class="form-control" id="df_${f.id}" value="${escapeHTML(val)}" ${f.required ? 'required' : ''} placeholder="${f.placeholder || ''}" />`;
+        }
+
+        group.innerHTML = `<label class="form-label">${f.label} ${f.required ? '<span style="color:var(--danger)">*</span>' : ''}</label>${inputHtml}`;
+        body.appendChild(group);
+      });
+
+      openModal("adminDynamicModal");
+    };
+
+    document.getElementById("adminDynamicForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const sectionKey = document.getElementById("dynSectionKey").value;
+      const editId = document.getElementById("dynEditId").value;
+      const schema = SECTION_SCHEMAS[sectionKey];
+      if (!schema) return;
+
+      const itemData = {};
+      schema.fields.forEach(f => {
+        const el = document.getElementById("df_" + f.id);
+        if (el) {
+          itemData[f.id] = f.type === "number" ? (parseFloat(el.value) || 0) : el.value.trim();
+        }
+      });
+
+      if (sectionKey === "schedules") {
+        itemData.period = "الحصة " + (itemData.periodIndex || "1");
+      }
+
+      if (editId) itemData.id = editId;
+
+      await saveData(sectionKey, itemData);
+      showToast(editId ? "تم حفظ التعديلات بنجاح!" : "تمت الإضافة بنجاح وظهورها على الموقع!", "success");
+      closeModal("adminDynamicModal");
+
+      await renderAllPublicViews();
+      await renderAllAdminPanels();
+    });
+
+    /* ==========================================================================
+       سادساً: جدول الحصص الأسبوعي التفاعلي
+       ========================================================================== */
+    const DEFAULT_CURRICULUM = [
+      { p: 1, subject: "اللغة العربية", teacher: "أ. فاطمة الظاهري", phone: "971501112233", room: "قاعة 201" },
+      { p: 2, subject: "الرياضيات المتقدمة", teacher: "أ. عبد الله المهيري", phone: "971502223344", room: "قاعة 201" },
+      { p: 3, subject: "اللغة الإنجليزية المتقدمة", teacher: "أ. سارة الحمادي", phone: "971503334455", room: "مختبر اللغات" },
+      { p: 4, subject: "الفيزياء المتقدمة", teacher: "د. خالد السعدي", phone: "971504445566", room: "المختبر العلمي" },
+      { p: 5, subject: "التربية الإسلامية", teacher: "أ. محمد الكعبي", phone: "971505556677", room: "قاعة 201" },
+      { p: 6, subject: "الدراسات الاجتماعية", teacher: "أ. مريم المنصوري", phone: "971506667788", room: "قاعة 201" },
+      { p: 7, subject: "الحوسبة والذكاء الاصطناعي", teacher: "م. أحمد الشامسي", phone: "971507778899", room: "مختبر الحاسوب" }
+    ];
+
+    async function getFullTimetableFor(grade, section) {
+      const dbSchedules = await loadData("schedules");
+      const matched = dbSchedules.filter(s => s.grade === grade && String(s.section) === String(section));
+
+      const fullSchedule = [];
+      DAYS_LIST.forEach((day, dIdx) => {
+        PERIODS_LIST.forEach((pObj, pIdx) => {
+          const pNum = pIdx + 1;
+          const found = matched.find(m => m.day === day && (Number(m.periodIndex) === pNum || m.period === pObj.name));
+          
+          if (found) {
+            fullSchedule.push({
+              ...found,
+              period: pObj.name,
+              time: found.time || pObj.time
+            });
+          } else {
+            const rotIdx = (pIdx + dIdx) % DEFAULT_CURRICULUM.length;
+            const def = DEFAULT_CURRICULUM[rotIdx];
+            fullSchedule.push({
+              id: `gen_${grade}_${section}_${day}_${pNum}`,
+              grade,
+              section,
+              day,
+              periodIndex: pNum,
+              period: pObj.name,
+              time: pObj.time,
+              subject: def.subject,
+              teacher: def.teacher,
+              teacherPhone: def.phone,
+              room: def.room
+            });
+          }
+        });
+      });
+
+      return fullSchedule;
+    }
+
+    async function renderPublicTimetable() {
+      const grade = document.getElementById("ttGradeSelect").value;
+      const section = document.getElementById("ttSectionSelect").value;
+      const dayOption = document.getElementById("ttDayOption").value;
+      const container = document.getElementById("timetableOutputContainer");
+
+      document.getElementById("ttCurrentHeading").textContent = `${grade} — شعبة (${section})`;
+
+      const scheduleData = await getFullTimetableFor(grade, section);
+
+      if (dayOption === "week") {
+        let tableHtml = `
+          <div class="table-responsive">
+            <table class="timetable-grid-table">
+              <thead>
+                <tr>
+                  <th style="width: 10%;">الحصة / التوقيت</th>
+                  <th style="width: 18%;">الإثنين</th>
+                  <th style="width: 18%;">الثلاثاء</th>
+                  <th style="width: 18%;">الأربعاء</th>
+                  <th style="width: 18%;">الخميس</th>
+                  <th style="width: 18%;">الجمعة</th>
+                </tr>
+              </thead>
+              <tbody>
+        `;
+
+        PERIODS_LIST.forEach((pObj, pIdx) => {
+          const pNum = pIdx + 1;
+          tableHtml += `
+            <tr>
+              <td>
+                <div style="font-weight:900; font-size:0.9rem;">${pObj.name}</div>
+                <div style="font-size:0.7rem; color:var(--text-muted);">${pObj.time}</div>
+              </td>
+          `;
+
+          DAYS_LIST.forEach(day => {
+            const slot = scheduleData.find(s => s.day === day && (Number(s.periodIndex) === pNum || s.period === pObj.name));
+            if (slot) {
+              const cleanPhone = (slot.teacherPhone || "971501234567").replace(/[^0-9]/g, '');
+              const waMsg = encodeURIComponent(`السلام عليكم أستاذ(ة) ${slot.teacher}، أنا ولي أمر طالب في ${slot.grade} (شعبة ${slot.section}) بخصوص مادة ${slot.subject}.`);
+              
+              tableHtml += `
+                <td>
+                  <div class="tt-slot-card">
+                    <span class="tt-slot-subject">${escapeHTML(slot.subject)}</span>
+                    <span class="tt-slot-teacher"><i class="fa-solid fa-user-tie" style="color:var(--secondary); font-size:0.75rem;"></i> ${escapeHTML(slot.teacher)}</span>
+                    <span style="font-size:0.68rem; color:var(--text-muted);"><i class="fa-solid fa-door-open"></i> ${escapeHTML(slot.room || 'قاعة 1')}</span>
+                    <a href="https://wa.me/${cleanPhone}?text=${waMsg}" target="_blank" class="teacher-wa-badge" title="محادثة واتساب مباشرة مع المعلم">
+                      <i class="fa-brands fa-whatsapp"></i> واتساب المعلم
+                    </a>
+                  </div>
+                </td>
+              `;
+            } else {
+              tableHtml += `<td><span style="color:var(--text-muted); font-size:0.8rem;">—</span></td>`;
+            }
+          });
+
+          tableHtml += `</tr>`;
+        });
+
+        tableHtml += `
+              </tbody>
+            </table>
+          </div>
+        `;
+
+        container.innerHTML = tableHtml;
+
+      } else {
+        const daySlots = scheduleData.filter(s => s.day === dayOption);
+        
+        container.innerHTML = `
+          <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; margin-bottom:1rem;">
+            <strong style="color:var(--secondary); font-size:1.05rem;"><i class="fa-solid fa-calendar-check"></i> حصص يوم ${dayOption}:</strong>
+          </div>
+          <div class="day-view-cards">
+            ${daySlots.map(slot => {
+              const cleanPhone = (slot.teacherPhone || "971501234567").replace(/[^0-9]/g, '');
+              const waMsg = encodeURIComponent(`السلام عليكم أستاذ(ة) ${slot.teacher}، أنا ولي أمر طالب في ${slot.grade} (شعبة ${slot.section}) بخصوص مادة ${slot.subject}.`);
+              return `
+                <div class="day-slot-box">
+                  <div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                      <span class="badge-sub" style="margin:0; font-size:0.75rem;">${slot.period}</span>
+                      <span style="font-size:0.78rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${slot.time}</span>
+                    </div>
+                    <h3 style="font-size:1.1rem; color:var(--primary); font-weight:800; margin-bottom:4px;">${escapeHTML(slot.subject)}</h3>
+                    <p style="font-size:0.85rem; color:var(--text-main); margin-bottom:3px;"><strong>المعلم:</strong> ${escapeHTML(slot.teacher)}</p>
+                    <p style="font-size:0.8rem; color:var(--text-muted);"><strong>القاعة:</strong> ${escapeHTML(slot.room || 'قاعة الصف')}</p>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/${cleanPhone}?text=${waMsg}" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">
+                      <i class="fa-brands fa-whatsapp"></i> تواصل مع المعلم عبر واتساب
+                    </a>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        `;
+      }
+    }
+
+    document.getElementById("ttGradeSelect").addEventListener("change", renderPublicTimetable);
+    document.getElementById("ttSectionSelect").addEventListener("change", renderPublicTimetable);
+    document.getElementById("ttDayOption").addEventListener("change", renderPublicTimetable);
+    document.getElementById("ttRefreshBtn").addEventListener("click", () => {
+      renderPublicTimetable();
+      showToast("تم تحديث الجدول الدراسي بنجاح", "info");
+    });
+
+    /* ==========================================================================
+       سابعاً: دوال عرض الأقسام العامة (Public Renderers)
+       ========================================================================== */
+    async function renderAllPublicViews() {
+      renderPublicFeesDropdown();
+      renderPublicTimetable();
+      renderPublicAcademics();
+      renderPublicTransport();
+      renderPublicJobs();
+      renderPublicNews();
+      renderPublicCalendar();
+      renderPublicFiles();
+      renderPublicSafetyCirculars();
+    }
+
+    async function renderPublicSafetyCirculars() {
+      const list = await loadData("safety_circulars");
+      const c = document.getElementById("safetyCircularsContainer");
+      if (!list || list.length === 0) {
+        c.innerHTML = `<p style="color:var(--text-muted); font-size:0.9rem;">لا توجد تعميمات جديدة حالياً.</p>`;
+        return;
+      }
+      c.innerHTML = list.map(item => `
+        <div style="padding:0.9rem 1.1rem; background:var(--bg-surface-alt); border-radius:var(--radius-sm); margin-bottom:0.75rem; border-right:4px solid var(--secondary);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
+            <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">${escapeHTML(item.desc)}</p>
+        </div>
+      `).join("");
+    }
+
+    async function renderPublicAcademics() {
+      const list = await loadData("academics");
+      document.getElementById("pubAcademicsGrid").innerHTML = list.map(ac => `
+        <div class="card" style="padding:0; overflow:hidden;">
+          <img src="${ac.img}" style="height:140px; width:100%;" alt="${escapeHTML(ac.title)}" />
+          <div style="padding:1rem;">
+            <h3 style="font-size:1.05rem; margin-bottom:0.3rem;">${escapeHTML(ac.title)}</h3>
+            <p style="font-size:0.82rem; color:var(--text-muted);">${escapeHTML(ac.desc)}</p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderPublicTransport() {
+      const list = await loadData("transport");
+      document.getElementById("pubTransportGrid").innerHTML = list.map(tr => `
+        <div class="card">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:0.5rem;">
+            <i class="fa-solid fa-bus" style="font-size:1.4rem; color:var(--secondary);"></i>
+            <h3 style="font-size:1.1rem; color:var(--primary);">${escapeHTML(tr.zone)}</h3>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.3rem;"><strong>الحافلات:</strong> ${escapeHTML(tr.busNo)}</p>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.3rem;"><strong>المشرفة:</strong> ${escapeHTML(tr.supervisor)}</p>
+          <p style="font-size:0.82rem; color:var(--accent); font-weight:700;">${escapeHTML(tr.time)}</p>
+        </div>
+      `).join("");
+    }
+
+    async function renderPublicFeesDropdown() {
+      const fees = await loadData("fees");
+      const dropdown = document.getElementById("feesGradeDropdown");
+      dropdown.innerHTML = "";
+
+      fees.forEach((fe, idx) => {
+        const opt = document.createElement("option");
+        opt.value = fe.id;
+        opt.textContent = `${fe.grade} — (${Number(fe.tuition).toLocaleString()} د.إ سنوي)`;
+        if (idx === 0) opt.selected = true;
+        dropdown.appendChild(opt);
+      });
+
+      updateSelectedGradeFeeDisplay();
+    }
+
+    async function updateSelectedGradeFeeDisplay() {
+      const fees = await loadData("fees");
+      const selId = document.getElementById("feesGradeDropdown").value;
+      const fe = fees.find(f => String(f.id) === String(selId)) || fees[0];
+      if (!fe) return;
+
+      const totalBase = Number(fe.tuition) + Number(fe.books) + Number(fe.uniform) + Number(fe.transport);
+
+      document.getElementById("selectedGradeFeeCard").innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <h3 style="color:var(--primary); font-size:1.15rem; font-weight:800;">
+            <i class="fa-solid fa-graduation-cap" style="color:var(--secondary);"></i> ${escapeHTML(fe.grade)}
+          </h3>
+          <span class="badge-sub" style="margin:0;">منهاج وزاري متقدم معتمد</span>
+        </div>
+        <div class="fee-item-row">
+          <span><i class="fa-solid fa-money-check-dollar" style="color:var(--secondary);"></i> الرسوم الدراسية السنوية الأساسية:</span>
+          <strong>${Number(fe.tuition).toLocaleString()} د.إ</strong>
+        </div>
+        <div class="fee-item-row">
+          <span><i class="fa-solid fa-book" style="color:var(--secondary);"></i> رسوم الكتب المدرسية:</span>
+          <strong>${Number(fe.books).toLocaleString()} د.إ</strong>
+        </div>
+        <div class="fee-item-row">
+          <span><i class="fa-solid fa-shirt" style="color:var(--secondary);"></i> رسوم الزي المدرسي الرسمي:</span>
+          <strong>${Number(fe.uniform).toLocaleString()} د.إ</strong>
+        </div>
+        <div class="fee-item-row">
+          <span><i class="fa-solid fa-bus" style="color:var(--secondary);"></i> رسوم خدمة النقل المدرسي (الحافلة):</span>
+          <strong>${Number(fe.transport).toLocaleString()} د.إ</strong>
+        </div>
+        <div class="fee-item-row">
+          <span><i class="fa-solid fa-calendar-check" style="color:var(--secondary);"></i> نظام الدفع والأقساط:</span>
+          <span style="font-weight:700; color:var(--primary);">${escapeHTML(fe.plan || '3 أقساط متساوية')}</span>
+        </div>
+        <div style="margin-top:0.75rem; padding:0.6rem 0.75rem; background:rgba(197, 160, 89, 0.15); border-radius:var(--radius-sm); display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:800; font-size:0.9rem;">الإجمالي الشامل الثابت للصف:</span>
+          <strong style="color:var(--secondary); font-size:1.1rem;">${totalBase.toLocaleString()} د.إ</strong>
+        </div>
+      `;
+
+      recalculateCustomFee();
+    }
+
+    async function recalculateCustomFee() {
+      const fees = await loadData("fees");
+      const selId = document.getElementById("feesGradeDropdown").value;
+      const fe = fees.find(f => String(f.id) === String(selId)) || fees[0];
+      if (!fe) return;
+
+      const incBus = document.getElementById("feeOptionBus").value === "yes";
+      const incBooks = document.getElementById("feeOptionBooks").checked;
+      const incUniform = document.getElementById("feeOptionUniform").checked;
+      const discRate = parseFloat(document.getElementById("feeOptionDiscount").value) || 0;
+
+      const discountedTuition = fe.tuition - (fe.tuition * discRate);
+      let customTotal = discountedTuition;
+
+      if (incBooks) customTotal += Number(fe.books);
+      if (incUniform) customTotal += Number(fe.uniform);
+      if (incBus) customTotal += Number(fe.transport);
+
+      document.getElementById("feeCustomTotalDisplay").textContent = Math.round(customTotal).toLocaleString() + " د.إ";
+    }
+
+    document.getElementById("feesGradeDropdown").addEventListener("change", updateSelectedGradeFeeDisplay);
+    document.getElementById("feeOptionBus").addEventListener("change", recalculateCustomFee);
+    document.getElementById("feeOptionDiscount").addEventListener("change", recalculateCustomFee);
+    document.getElementById("feeOptionBooks").addEventListener("change", recalculateCustomFee);
+    document.getElementById("feeOptionUniform").addEventListener("change", recalculateCustomFee);
+    document.getElementById("recalcCustomFeeBtn").addEventListener("click", () => {
+      recalculateCustomFee();
+      showToast("تم تحديث حساب الرسوم", "success");
+    });
+
+    async function renderPublicJobs() {
+      const jobs = await loadData("jobs");
+      document.getElementById("publicJobsGrid").innerHTML = jobs.map(j => `
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+            <div>
+              <h3 style="font-size:1.1rem; color:var(--primary);">${escapeHTML(j.title)}</h3>
+              <span style="font-size:0.8rem; color:var(--text-muted);">${escapeHTML(j.dept)} | ${escapeHTML(j.type)}</span>
+            </div>
+            <span class="badge-sub" style="margin:0;"><i class="fa-solid fa-briefcase"></i> متاح</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.25rem;"><strong>المؤهل:</strong> ${escapeHTML(j.qual)}</p>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;"><strong>الخبرة:</strong> ${escapeHTML(j.exp)}</p>
+          <button class="btn btn-whatsapp btn-sm" onclick="openJobModal('${escapeHTML(j.title)}')">
+            <i class="fa-brands fa-whatsapp"></i> تقديم عبر واتساب مع السيرة (CV)
+          </button>
+        </div>
+      `).join("");
+    }
+
+    window.openJobModal = function(title) {
+      document.getElementById("applyJobTitle").value = title;
+      document.getElementById("jobApplyModalTitle").textContent = "التقديم على: " + title;
+      openModal("jobApplyModal");
+    };
+
+    document.getElementById("jobApplyForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const s = getLocal("settings");
+      const jobTitle = document.getElementById("applyJobTitle").value;
+      const name = document.getElementById("appCandName").value.trim();
+      const phone = document.getElementById("appCandPhone").value.trim();
+      const email = document.getElementById("appCandEmail").value.trim();
+      const qual = document.getElementById("appCandQual").value.trim();
+      const notes = document.getElementById("appCandNotes").value.trim();
+
+      const candidate = {
+        name,
+        jobTitle,
+        phone,
+        email,
+        qual,
+        notes,
+        date: new Date().toLocaleDateString("ar-EG")
+      };
+
+      await saveData("applications", candidate);
+
+      const cleanWA = s.whatsapp.replace(/[^0-9]/g, '');
+      const waText = 
+`*طلب تقديم على وظيفة - مدرسة الثروات الوطنية الخاصة*
+━━━━━━━━━━━━━━━━━━
+*المسمى الوظيفي:* ${jobTitle}
+*اسم المتقدم:* ${name}
+*رقم الهاتف:* ${phone}
+*البريد الإلكتروني:* ${email}
+*المؤهل والخبرة:* ${qual}
+*ملاحظات:* ${notes || 'لا يوجد'}
+━━━━━━━━━━━━━━━━━━
+📎 *مرفق لكم ملف السيرة الذاتية (CV) في هذه المحادثة مباشرة.*`;
+
+      closeModal("jobApplyModal");
+      e.target.reset();
+      showToast("تم تسجيل طلبك! جاري فتح واتساب لإرفاق سيرتك الذاتية...", "success");
+
+      setTimeout(() => {
+        window.open(`https://wa.me/${cleanWA}?text=${encodeURIComponent(waText)}`, "_blank");
+      }, 700);
+
+      renderAdminApps();
+    });
+
+    async function renderPublicNews() {
+      const news = await loadData("news");
+      document.getElementById("publicNewsGrid").innerHTML = news.map(n => `
+        <div class="card" style="padding:0; overflow:hidden;">
+          <div style="height:165px; position:relative;">
+            <img src="${n.image}" alt="${escapeHTML(n.title)}" style="width:100%; height:100%;" />
+            <span class="badge-sub" style="position:absolute; top:8px; right:8px; background:var(--primary); color:#fff; margin:0;">${escapeHTML(n.category)}</span>
+          </div>
+          <div style="padding:1rem;">
+            <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:0.3rem;"><i class="fa-regular fa-calendar"></i> ${escapeHTML(n.date)}</span>
+            <h3 style="font-size:1.02rem; margin-bottom:0.4rem; line-height:1.4;">${escapeHTML(n.title)}</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">${escapeHTML(n.desc)}</p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderPublicCalendar() {
+      const cal = await loadData("calendar");
+      document.getElementById("publicCalendarList").innerHTML = cal.map(c => `
+        <div class="card" style="padding:0.85rem 1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <h4 style="font-size:0.92rem; margin-bottom:2px;">${escapeHTML(c.title)}</h4>
+              <span class="badge-sub" style="margin:0; font-size:0.7rem;">${escapeHTML(c.cat)}</span>
+            </div>
+            <strong style="color:var(--secondary); font-size:0.88rem;"><i class="fa-regular fa-clock"></i> ${escapeHTML(c.date)}</strong>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderPublicFiles() {
+      const files = await loadData("files");
+      document.getElementById("publicFilesGrid").innerHTML = files.map(f => `
+        <div class="card">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:0.75rem;">
+            <div style="width:38px; height:38px; border-radius:8px; background:rgba(197, 160, 89, 0.15); color:var(--secondary); display:flex; align-items:center; justify-content:center; font-size:1.15rem;">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div>
+              <h4 style="font-size:0.9rem;">${escapeHTML(f.title)}</h4>
+              <span style="font-size:0.72rem; color:var(--text-muted);">${escapeHTML(f.category)}</span>
+            </div>
+          </div>
+          <a href="${f.url}" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="width:100%;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> فتح وتحميل المستند
+          </a>
+        </div>
+      `).join("");
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = {
+        name: document.getElementById("cfName").value,
+        phone: document.getElementById("cfPhone").value,
+        dept: document.getElementById("cfDept").value,
+        message: document.getElementById("cfMessage").value,
+        date: new Date().toLocaleDateString("ar-EG")
+      };
+      await saveData("messages", msg);
+      showToast("تم إرسال رسالتكم بنجاح!", "success");
+      e.target.reset();
+      renderAdminMessages();
+      updateDashboardKPIs();
+    });
+
+    document.getElementById("openTransportModalBtn").addEventListener("click", () => openModal("transportModal"));
+    document.getElementById("transportForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const trReq = {
+        name: document.getElementById("trStudentName").value + " (طلب حافلة)",
+        phone: document.getElementById("trParentPhone").value,
+        dept: document.getElementById("trType").value,
+        message: `الصف والشعبة: ${document.getElementById("trGrade").value} | العنوان: ${document.getElementById("trAddress").value}`,
+        date: new Date().toLocaleDateString("ar-EG")
+      };
+      await saveData("messages", trReq);
+      showToast("تم استلام طلب خدمة الحافلة بنجاح!", "success");
+      closeModal("transportModal");
+      e.target.reset();
+      renderAdminMessages();
+      updateDashboardKPIs();
+    });
+
+    document.getElementById("searchBtn").addEventListener("click", () => openModal("searchModal"));
+    document.getElementById("siteSearchInput").addEventListener("input", async (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const res = document.getElementById("siteSearchResults");
+      if (!q) {
+        res.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">اكتب أي كلمة للبحث الفوري...</p>`;
+        return;
+      }
+
+      const [fees, news, jobs, files, safety] = await Promise.all([
+        loadData("fees"), loadData("news"), loadData("jobs"), loadData("files"), loadData("safety_circulars")
+      ]);
+
+      const matched = [];
+      fees.forEach(f => { if (f.grade.toLowerCase().includes(q)) matched.push({ t: f.grade, sec: "الرسوم الدراسية", l: "#fees" }); });
+      news.forEach(n => { if (n.title.toLowerCase().includes(q) || n.desc.toLowerCase().includes(q)) matched.push({ t: n.title, sec: "الأخبار", l: "#news" }); });
+      jobs.forEach(j => { if (j.title.toLowerCase().includes(q) || j.dept.toLowerCase().includes(q)) matched.push({ t: j.title, sec: "الوظائف الشاغرة", l: "#careers" }); });
+      files.forEach(fl => { if (fl.title.toLowerCase().includes(q)) matched.push({ t: fl.title, sec: "الملفات", l: "#files" }); });
+      safety.forEach(s => { if (s.title.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q)) matched.push({ t: s.title, sec: "الأمن والسلامة", l: "#safety" }); });
+
+      if (matched.length === 0) {
+        res.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">لا توجد نتائج مطابقة.</p>`;
+      } else {
+        res.innerHTML = matched.map(m => `
+          <a href="${m.l}" onclick="closeModal('searchModal')" style="padding:8px 10px; background:var(--bg-surface-alt); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-weight:700; font-size:0.85rem;">${escapeHTML(m.t)}</span>
+            <span class="badge-sub" style="margin:0; font-size:0.7rem;">${escapeHTML(m.sec)}</span>
+          </a>
+        `).join("");
+      }
+    });
+
+    /* ==========================================================================
+       ثامناً: دوال لوحة التحكم الإدارية
+       ========================================================================== */
+    window.filterAdminSection = async function(sectionKey, query) {
+      const q = query.toLowerCase().trim();
+      const list = await loadData(sectionKey);
+      const filtered = q ? list.filter(item => JSON.stringify(item).toLowerCase().includes(q)) : list;
+      
+      switch (sectionKey) {
+        case "safety_circulars": renderAdminSafetyCirculars(filtered); break;
+        case "academics": renderAdminAcademics(filtered); break;
+        case "fees": renderAdminFees(filtered); break;
+        case "schedules": renderAdminTT(filtered); break;
+        case "transport": renderAdminTransport(filtered); break;
+        case "news": renderAdminNews(filtered); break;
+        case "calendar": renderAdminCalendar(filtered); break;
+        case "jobs": renderAdminJobs(filtered); break;
+        case "files": renderAdminFiles(filtered); break;
+        case "messages": renderAdminMessages(filtered); break;
+        case "applications": renderAdminApps(filtered); break;
+      }
+    };
+
+    async function updateDashboardKPIs() {
+      const [fees, schedules, transport, news, jobs, messages, apps, academics, files, calendar, safety] = await Promise.all([
+        loadData("fees"), loadData("schedules"), loadData("transport"), loadData("news"),
+        loadData("jobs"), loadData("messages"), loadData("applications"), loadData("academics"),
+        loadData("files"), loadData("calendar"), loadData("safety_circulars")
+      ]);
+
+      document.getElementById("kpiFees").textContent = fees.length;
+      document.getElementById("kpiSchedules").textContent = schedules.length;
+      document.getElementById("kpiSafety").textContent = safety.length;
+      document.getElementById("kpiNews").textContent = news.length;
+      document.getElementById("kpiJobs").textContent = jobs.length;
+      document.getElementById("kpiInquiries").textContent = messages.length + apps.length;
+
+      document.getElementById("badgeCountAcademics").textContent = academics.length;
+      document.getElementById("badgeCountFees").textContent = fees.length;
+      document.getElementById("badgeCountTimetable").textContent = schedules.length;
+      document.getElementById("badgeCountSafety").textContent = safety.length;
+      document.getElementById("badgeCountTransport").textContent = transport.length;
+      document.getElementById("badgeCountNews").textContent = news.length;
+      document.getElementById("badgeCountCalendar").textContent = calendar.length;
+      document.getElementById("badgeCountJobs").textContent = jobs.length;
+      document.getElementById("badgeCountFiles").textContent = files.length;
+      document.getElementById("badgeCountMessages").textContent = messages.length + apps.length;
+
+      const recent = messages.slice(0, 3);
+      const recentBox = document.getElementById("dashboardRecentMessages");
+      if (recent.length === 0) {
+        recentBox.innerHTML = `<p style="font-size:0.85rem; color:var(--text-muted);">لا توجد استفسارات جديدة حتى الآن.</p>`;
+      } else {
+        recentBox.innerHTML = recent.map(m => `
+          <div style="padding:0.6rem 0.8rem; background:var(--bg-surface-alt); border-radius:var(--radius-sm); margin-bottom:6px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong style="font-size:0.9rem;">${escapeHTML(m.name)}</strong> <span style="font-size:0.75rem; color:var(--text-muted);">&bull; ${escapeHTML(m.dept)}</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">${escapeHTML(m.message)}</p>
+            </div>
+            <span style="font-size:0.75rem; color:var(--secondary); font-weight:700;">${escapeHTML(m.date)}</span>
+          </div>
+        `).join("");
+      }
+    }
+
+    async function renderAllAdminPanels() {
+      await updateDashboardKPIs();
+      renderAdminSafetyCirculars();
+      renderAdminAcademics();
+      renderAdminFees();
+      renderAdminTT();
+      renderAdminTransport();
+      renderAdminNews();
+      renderAdminCalendar();
+      renderAdminJobs();
+      renderAdminFiles();
+      renderAdminMessages();
+      renderAdminApps();
+    }
+
+    async function renderAdminSafetyCirculars(customList = null) {
+      const list = customList || await loadData("safety_circulars");
+      document.getElementById("admSafetyCircularsList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:1rem;">${escapeHTML(item.title)}</strong>
+            <span class="badge-sub" style="margin:0; font-size:0.7rem;"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</span>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">${escapeHTML(item.desc)}</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('safety_circulars', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('safety_circulars', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminAcademics(customList = null) {
+      const list = customList || await loadData("academics");
+      document.getElementById("admAcademicsList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:1rem;">${escapeHTML(item.title)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">${escapeHTML(item.desc)}</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('academics', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('academics', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminFees(customList = null) {
+      const list = customList || await loadData("fees");
+      document.getElementById("admFeesList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:1rem;">${escapeHTML(item.grade)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
+              القسط: <strong>${Number(item.tuition).toLocaleString()} د.إ</strong> | الكتب: ${Number(item.books).toLocaleString()} د.إ | الزي: ${Number(item.uniform).toLocaleString()} د.إ | النقل: ${Number(item.transport).toLocaleString()} د.إ
+            </p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('fees', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('fees', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminTT(customList = null) {
+      const list = customList || await loadData("schedules");
+      document.getElementById("admTTList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.grade)} - شعبة (${escapeHTML(item.section || '1')}) &bull; ${escapeHTML(item.period || ('الحصة ' + item.periodIndex))}: ${escapeHTML(item.subject)} (${escapeHTML(item.day)})</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
+              المعلم: ${escapeHTML(item.teacher)} &bull; واتساب: <span dir="ltr">${escapeHTML(item.teacherPhone || 'غير محدد')}</span> &bull; القاعة: ${escapeHTML(item.room)} &bull; الوقت: ${escapeHTML(item.time)}
+            </p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('schedules', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('schedules', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminTransport(customList = null) {
+      const list = customList || await loadData("transport");
+      document.getElementById("admTransportList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.zone)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">
+              الحافلة: ${escapeHTML(item.busNo)} &bull; المشرفة: ${escapeHTML(item.supervisor)} &bull; ${escapeHTML(item.time)}
+            </p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('transport', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('transport', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminNews(customList = null) {
+      const list = customList || await loadData("news");
+      document.getElementById("admNewsList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
+            <span class="badge-sub" style="margin:0; font-size:0.7rem;">${escapeHTML(item.category)}</span>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">${escapeHTML(item.date)} &bull; <a href="${item.image}" target="_blank" style="color:var(--info);">معاينة الصورة</a></p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('news', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('news', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminCalendar(customList = null) {
+      const list = customList || await loadData("calendar");
+      document.getElementById("admCalList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">التاريخ: ${escapeHTML(item.date)} &bull; التصنيف: ${escapeHTML(item.cat)}</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('calendar', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('calendar', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminJobs(customList = null) {
+      const list = customList || await loadData("jobs");
+      document.getElementById("admJobsList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">${escapeHTML(item.dept)} &bull; ${escapeHTML(item.type)} &bull; الخبرة: ${escapeHTML(item.exp)}</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('jobs', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('jobs', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminFiles(customList = null) {
+      const list = customList || await loadData("files");
+      document.getElementById("admFilesList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">التصنيف: ${escapeHTML(item.category)} &bull; <a href="${item.url}" target="_blank" style="color:var(--info);">اختبار الرابط</a></p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <button class="btn btn-sm btn-outline" onclick="openSectionCrud('files', '${item.id}')"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('files', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminMessages(customList = null) {
+      const list = customList || await loadData("messages");
+      document.getElementById("admMessagesList").innerHTML = list.map(item => `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.name)} (${escapeHTML(item.dept)})</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">الهاتف: <span dir="ltr">${escapeHTML(item.phone)}</span> &bull; الرسالة: ${escapeHTML(item.message)} &bull; ${escapeHTML(item.date)}</p>
+          </div>
+          <button class="btn btn-sm btn-danger" onclick="confirmDelete('messages', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      `).join("");
+    }
+
+    async function renderAdminApps(customList = null) {
+      const list = customList || await loadData("applications");
+      document.getElementById("admAppsList").innerHTML = list.map(item => {
+        const cleanP = item.phone.replace(/[^0-9]/g, '');
+        return `
+        <div class="adm-item-card">
+          <div>
+            <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.name)} (${escapeHTML(item.jobTitle)})</strong>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">الهاتف: <span dir="ltr">${escapeHTML(item.phone)}</span> &bull; المؤهل: ${escapeHTML(item.qual)} &bull; ${escapeHTML(item.date)}</p>
+          </div>
+          <div style="display:flex; gap:6px;">
+            <a href="https://wa.me/${cleanP}" target="_blank" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+            <button class="btn btn-sm btn-danger" onclick="confirmDelete('applications', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+      `;
+      }).join("");
+    }
+
+    function updateAdminClock() {
+      const clock = document.getElementById("adminLiveClock");
+      if (clock) {
+        const now = new Date();
+        clock.innerHTML = `<i class="fa-regular fa-clock"></i> ${now.toLocaleDateString("ar-EG", { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' })} - ${now.toLocaleTimeString("ar-EG")}`;
+      }
+    }
+    setInterval(updateAdminClock, 1000);
+
+    /* ==========================================================================
+       تاسعاً: التشغيل والتهيئة عند تحميل الصفحة
+       ========================================================================== */
+    window.addEventListener("DOMContentLoaded", async () => {
+      await applyDynamicSettings();
+      await renderAllPublicViews();
+
+      if (sessionStorage.getItem("TNS_ADMIN_AUTH") === "true") {
+        renderAllAdminPanels();
+      }
+
+      updateAdminClock();
+
+      setTimeout(() => {
+        const l = document.getElementById("pageLoader");
+        if (l) l.classList.add("hidden");
+      }, 300);
+    });
+  </script>
+</body>
+</html>
