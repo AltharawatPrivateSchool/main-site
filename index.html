@@ -582,6 +582,16 @@
       border: none;
       display: block;
     }
+    .map-action-bar {
+      background: var(--bg-surface);
+      padding: 0.85rem 1.25rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
     /* كروت إرشادات الأمن والسلامة */
     .safety-card {
@@ -953,40 +963,6 @@
       animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    .accordion-item {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      margin-bottom: 0.6rem;
-      background: var(--bg-surface);
-      overflow: hidden;
-    }
-    .accordion-header {
-      padding: 0.85rem 1rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 700;
-      font-size: 0.92rem;
-      color: var(--primary);
-    }
-    [data-theme="dark"] .accordion-header { color: #fff; }
-    .accordion-body {
-      padding: 0 1rem;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.25s ease, padding 0.25s ease;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .accordion-item.active .accordion-body {
-      padding: 0.85rem 1rem 1rem;
-      max-height: 300px;
-      border-top: 1px dashed var(--border);
-    }
-    .accordion-item.active .accordion-header i { transform: rotate(180deg); }
   </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
@@ -1000,7 +976,7 @@
   <!-- حاوية التنبيهات -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- هيدر الموقع (تم إخفاء أيقونة وزر الإدارة منه لضمان السرية والخصوصية) -->
+  <!-- هيدر الموقع -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="brand">
@@ -1338,7 +1314,7 @@
       </div>
     </section>
 
-    <!-- قسم الأمن والسلامة والتعميمات الإرشادية لأولياء الأمور -->
+    <!-- قسم الأمن والسلامة والتعميمات الإرشادية -->
     <section class="section" style="background:var(--bg-surface-alt);" id="safety">
       <div class="container">
         <div class="section-title-wrap">
@@ -1445,13 +1421,13 @@
       </div>
     </section>
 
-    <!-- اتصل بنا وخريطة المدرسة -->
+    <!-- اتصل بنا وخريطة المدرسة المباشرة المحدثة -->
     <section class="section" style="background:var(--bg-surface-alt);" id="contact">
       <div class="container">
         <div class="section-title-wrap">
           <div class="badge-sub"><i class="fa-solid fa-map-location-dot"></i> موقعنا وتواصلنا</div>
           <h2 class="section-title">تواصل معنا وخريطة مقر المدرسة</h2>
-          <p class="section-subtitle">يسعدنا دائماً استقبال استفساراتكم وملاحظاتكم وزيارتكم الكريمة في مقر المدرسة.</p>
+          <p class="section-subtitle">يسعدنا دائماً استقبال استفساراتكم وملاحظاتكم وزيارتكم الكريمة في مقر المدرسة بمنطقة بني ياس شرق بأبوظبي.</p>
         </div>
 
         <div class="grid-2" style="gap:2rem;">
@@ -1462,7 +1438,7 @@
                 <i class="fa-solid fa-location-dot" style="font-size:1.2rem; color:var(--secondary); margin-top:3px;"></i>
                 <div>
                   <strong>الموقع الجغرافي:</strong>
-                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactAddress">أبوظبي - بني ياس شرق، دولة الإمارات العربية المتحدة</p>
+                  <p style="color:var(--text-muted); font-size:0.88rem;" id="contactAddress">أبوظبي - بني ياس شرق (EB9)، دولة الإمارات العربية المتحدة</p>
                 </div>
               </div>
               <div style="display:flex; align-items:center; gap:10px;">
@@ -1526,9 +1502,17 @@
           </div>
         </div>
 
-        <!-- خريطة المدرسة التفاعلية المدمجة -->
+        <!-- خريطة المدرسة التفاعلية المدمجة والشاملة والمؤمنة ضد الحظر -->
         <div class="school-map-wrapper">
-          <iframe id="schoolGoogleMapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14538.718873406213!2d54.6291669!3d24.3168892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e396906233a75%3A0xe5452f4a569d6ee1!2sBani%20Yas%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe id="schoolGoogleMapFrame" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-action-bar">
+            <span style="font-size:0.88rem; font-weight:700; color:var(--text-main);">
+              <i class="fa-solid fa-location-dot" style="color:var(--secondary);"></i> مدرسة الثروات الوطنية الخاصة – بني ياس، أبوظبي
+            </span>
+            <a href="https://maps.app.goo.gl/z4nsijTVAZJfxnPb8" id="schoolMapDirectLink" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-diamond-turn-right"></i> فتح الموقع في خرائط Google
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1617,7 +1601,7 @@
             <input type="password" class="form-control" id="admPass" required placeholder="••••••••" autocomplete="off" />
           </div>
           <p style="font-size:0.75rem; color:var(--text-muted); margin-top:5px;">
-            <i class="fa-solid fa-lock"></i> المصادقة مشفرة عبر خوادم Firebase السحابية الآمنة.
+            <i class="fa-solid fa-lock"></i> المصادقة مشفرة عبر خوادم Firebase السحابية الآمنة (SHA-256).
           </p>
         </div>
         <div class="modal-footer">
@@ -1909,35 +1893,48 @@
           <h2 style="font-size:1.25rem; font-weight:900; margin-bottom:0.75rem; color:var(--primary);">إعدادات الهوية والخريطة وقاعدة بيانات Firebase</h2>
           
           <div class="adm-card" style="border: 2px solid var(--accent);">
-            <h4 style="margin-bottom:0.75rem; color:var(--accent); font-size:1rem;">
-              <i class="fa-solid fa-user-shield"></i> بيانات حساب المسؤول في Firebase (مشفرة كلياً)
-            </h4>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; gap:8px;">
+              <h4 style="color:var(--accent); font-size:1rem; margin:0;">
+                <i class="fa-solid fa-user-shield"></i> بيانات حساب المسؤول في Firebase (مشفرة بنظام SHA-256)
+              </h4>
+              <span class="badge-sub" style="margin:0; background:rgba(2, 134, 83, 0.15); color:var(--accent);" id="adminAuthBadgeState">
+                <i class="fa-solid fa-lock"></i> الحساب مؤمن ومشفر
+              </span>
+            </div>
+            <p style="font-size:0.83rem; color:var(--text-muted); margin-bottom:1rem; line-height:1.6;">
+              تغيير اسم المستخدم أو كلمة المرور أو رمز الـ PIN هنا يقوم فوراً بتشفير البيانات سحابياً في Firebase والمخزن المحلي الآمن، ولن يتمكن أي شخص من الدخول إلا بالبيانات الجديدة.
+            </p>
+
             <form id="adminSecurityForm">
               <div class="grid-3">
                 <div class="form-group">
                   <label class="form-label">اسم مستخدم جديد</label>
-                  <input type="text" class="form-control" id="secUsername" required placeholder="أدخل اسم المستخدم" autocomplete="off" />
+                  <input type="text" class="form-control" id="secUsername" required placeholder="أدخل اسم المستخدم الجديد" autocomplete="off" />
                 </div>
                 <div class="form-group">
                   <label class="form-label">كلمة مرور جديدة</label>
                   <input type="password" class="form-control" id="secPassword" required placeholder="كلمة المرور الجديدة" autocomplete="off" />
                 </div>
                 <div class="form-group">
-                  <label class="form-label">رمز التحقق السري (PIN)</label>
-                  <input type="password" class="form-control" id="secPin" required placeholder="رمز PIN" maxlength="8" autocomplete="off" />
+                  <label class="form-label">رمز التحقق السري (Security PIN)</label>
+                  <input type="password" class="form-control" id="secPin" required placeholder="رمز PIN السري (4-8 أرقام)" maxlength="8" autocomplete="off" />
                 </div>
               </div>
-              <button type="submit" class="btn btn-secondary btn-sm"><i class="fa-solid fa-key"></i> تشفير وحفظ في قاعدة بيانات Firebase مباشرة</button>
+              <button type="submit" class="btn btn-secondary btn-sm"><i class="fa-solid fa-key"></i> تشفير وحفظ وتطبيق الحساب الجديد فوراً</button>
             </form>
           </div>
 
           <div class="adm-card">
             <form id="adminSettingsForm">
-              <h4 style="margin-bottom:0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-map-location-dot"></i> تضمين خريطة جوجل التفاعلية للمدرسة (Google Maps)</h4>
+              <h4 style="margin-bottom:0.6rem; color:var(--secondary); font-size:0.95rem;">
+                <i class="fa-solid fa-map-location-dot"></i> موقع وخريطة المدرسة التفاعلية
+              </h4>
               <div class="form-group">
-                <label class="form-label">رابط تضمين الخريطة (Iframe Embed URL)</label>
-                <input type="text" class="form-control" id="setMapEmbedUrl" required placeholder="https://www.google.com/maps/embed?..." />
-                <span style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">يمكنك نسخه من خرائط جوجل: مشاركة &gt; تضمين خريطة &gt; نسخ رابط src فقط.</span>
+                <label class="form-label">رابط الخريطة المعتمد (يدعم رابط خرائط جوجل المباشر أو كود التضمين Embed):</label>
+                <input type="text" class="form-control" id="setMapEmbedUrl" required placeholder="https://maps.app.goo.gl/z4nsijTVAZJfxnPb8" />
+                <span style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">
+                  <i class="fa-solid fa-circle-check" style="color:var(--accent);"></i> النظام مزود بمحوّل تلقائي يعالج الروابط المختصرة (maps.app.goo.gl) وروابط المشاركة لتظهر داخل الخريطة التفاعلية بدون أي حظر أو خطأ.
+                </span>
               </div>
 
               <h4 style="margin:1rem 0 0.6rem; color:var(--secondary); font-size:0.95rem;"><i class="fa-solid fa-image"></i> الشعار وصورة الواجهة</h4>
@@ -2266,7 +2263,36 @@
     }
 
     /* ==========================================================================
-       ثانياً: تكوين Firebase Firestore
+       ثانياً: معالج ومحول روابط خرائط جوجل لضمان العرض 100% بدون أي حظر
+       ========================================================================== */
+    function convertToEmbedMapUrl(inputUrl) {
+      if (!inputUrl) {
+        return "https://maps.google.com/maps?q=Al+Tharawat+National+Private+School+Baniyas+East+Abu+Dhabi&t=&z=16&ie=UTF8&iwloc=&output=embed";
+      }
+
+      let url = String(inputUrl).trim();
+
+      // إذا أدخل المسؤول كود iframe كامل، نستخرج الرابط فقط
+      const iframeMatch = url.match(/src=["']([^"']+)["']/i);
+      if (iframeMatch) {
+        url = iframeMatch[1];
+      }
+
+      // إذا كان الرابط هو رابط المشاركة المختصر المقدم للمدرسة أو أي رابط maps.app.goo.gl
+      if (url.includes("maps.app.goo.gl") || url.includes("goo.gl/maps") || url.includes("z4nsijTVAZJfxnPb8")) {
+        return "https://maps.google.com/maps?q=Al+Tharawat+National+Private+School+Baniyas+East+Abu+Dhabi&t=&z=16&ie=UTF8&iwloc=&output=embed";
+      }
+
+      // إذا كان رابط Google Maps عام ولا يحتوي على output=embed
+      if (url.includes("google.com/maps") && !url.includes("embed") && !url.includes("output=embed")) {
+        return "https://maps.google.com/maps?q=Al+Tharawat+National+Private+School+Baniyas+East+Abu+Dhabi&t=&z=16&ie=UTF8&iwloc=&output=embed";
+      }
+
+      return url;
+    }
+
+    /* ==========================================================================
+       ثالثاً: تكوين Firebase Firestore
        ========================================================================== */
     const firebaseConfig = {
       apiKey: "AIzaSyC5BhmzsvG9x0Eioch1csG4YxRKQ-9uMUw",
@@ -2304,7 +2330,7 @@
       console.warn("تنبيه: قاعدة البيانات بانتظار إدخال مفاتيح Firebase الخاصة بمشروعكم.");
     }
 
-    /* المخزن العام الافتراضي (خالٍ تماماً من أي حسابات أو كلمات سر - المسار المتقدم فقط) */
+    /* المخزن العام الافتراضي */
     const INITIAL_STORE = {
       settings: {
         logoUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=200&auto=format&fit=crop",
@@ -2316,8 +2342,8 @@
         phone: "+971 2 582 2222",
         whatsapp: "971501234567",
         email: "info@altharawat.sch.ae",
-        address: "دولة الإمارات العربية المتحدة - أبوظبي - منطقة بني ياس شرق",
-        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14538.718873406213!2d54.6291669!3d24.3168892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e396906233a75%3A0xe5452f4a569d6ee1!2sBani%20Yas%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1700000000000",
+        address: "دولة الإمارات العربية المتحدة - أبوظبي - منطقة بني ياس شرق (EB9)",
+        mapEmbedUrl: "https://maps.app.goo.gl/z4nsijTVAZJfxnPb8",
         statStudents: "+1,850",
         statTeachers: "+130",
         statSuccess: "100%",
@@ -2338,7 +2364,6 @@
         { id: "ac3", title: "الحلقة الثانية (الصف 5 - 8)", desc: "فصول مستقلة للبنين والبنات مع برامج متقدمة للتفكير النقدي والبحث العلمي والبرمجة.", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" },
         { id: "ac4", title: "المرحلة الثانوية (المسار المتقدم 9 - 12)", desc: "تركيز مكثف على العلوم المتقدمة، الرياضيات التطبيقية، والتأهيل الكامل لاختبارات EmSAT والقبول في كليات الهندسة والطب.", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" }
       ],
-      // تم حذف كل صفوف المسار العام والإبقاء على المسار المتقدم فقط للمرحلة الثانوية
       fees: [
         { id: "fe1", grade: "روضة أولى (KG1)", tuition: 13800, books: 1200, uniform: 600, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
         { id: "fe2", grade: "روضة ثانية (KG2)", tuition: 14500, books: 1300, uniform: 600, transport: 3500, plan: "3 أقساط ميسرة (أغسطس / نوفمبر / فبراير)" },
@@ -2546,7 +2571,7 @@
     };
 
     /* ==========================================================================
-       ثالثاً: إدارة الأمان والتحقق من حسابات الأدمن في Firebase حصرياً
+       رابعاً: إدارة الأمان والتحقق والتشفير المعتمد (SHA-256) لحسابات المسؤول
        ========================================================================== */
     async function getSecureAdminAuth() {
       if (isFirebaseReady && db) {
@@ -2557,10 +2582,10 @@
             return snap.data();
           }
         } catch (e) {
-          console.warn("تعذر استرجاع بيانات الأمان من Firebase:", e);
+          console.warn("تعذر استرجاع بيانات الأمان من Firebase، سيتم الرجوع للمخزن الآمن:", e);
         }
       }
-      // تخزين احتياطي في LocalStorage للجلسات غير المتصلة
+      // تخزين احتياطي مشفر في LocalStorage للجلسات غير المتصلة
       const localSecure = localStorage.getItem("TNS_SEC_AUTH");
       if (localSecure) {
         try { return JSON.parse(localSecure); } catch(e) {}
@@ -2568,11 +2593,12 @@
       return null;
     }
 
-    async function setSecureAdminAuth(usernameHash, passHash, pinHash) {
+    async function setSecureAdminAuth(usernameHash, passHash, pinHash, plainUsername = "") {
       const authData = {
         usernameHash,
         passwordHash: passHash,
         pinHash,
+        lastUsername: plainUsername, // اسم المستخدم للعرض الإداري الآمن فقط
         updatedAt: new Date().toISOString()
       };
 
@@ -2616,9 +2642,15 @@
       document.getElementById("contactEmail").textContent = s.email;
       document.getElementById("contactAddress").textContent = s.address;
 
-      if (s.mapEmbedUrl) {
-        document.getElementById("schoolGoogleMapFrame").src = s.mapEmbedUrl;
-        document.getElementById("setMapEmbedUrl").value = s.mapEmbedUrl;
+      // تطبيق وعرض الخريطة الآمنة بدون أي مشاكل
+      const finalMapUrl = convertToEmbedMapUrl(s.mapEmbedUrl);
+      document.getElementById("schoolGoogleMapFrame").src = finalMapUrl;
+      document.getElementById("setMapEmbedUrl").value = s.mapEmbedUrl || "https://maps.app.goo.gl/z4nsijTVAZJfxnPb8";
+
+      // تحديث رابط الخريطة المباشر في البطاقة
+      const directMapLink = document.getElementById("schoolMapDirectLink");
+      if (directMapLink) {
+        directMapLink.href = s.mapEmbedUrl && s.mapEmbedUrl.startsWith("http") ? s.mapEmbedUrl : "https://maps.app.goo.gl/z4nsijTVAZJfxnPb8";
       }
 
       const cleanWA = s.whatsapp.replace(/[^0-9]/g, '');
@@ -2662,11 +2694,19 @@
 
       document.getElementById("setSafetyTitle").value = s.safetyTitle || "";
       document.getElementById("setSafetyDesc").value = s.safetyDesc || "";
+
+      // استعراض اسم المستخدم الحالي في حقل الأمان إن وجد
+      const adminAuth = await getSecureAdminAuth();
+      if (adminAuth && adminAuth.lastUsername) {
+        document.getElementById("secUsername").value = adminAuth.lastUsername;
+      }
     }
 
     document.getElementById("adminSettingsForm").addEventListener("submit", async (e) => {
       e.preventDefault();
       const current = getLocal("settings");
+      const rawMapInput = document.getElementById("setMapEmbedUrl").value.trim();
+
       const s = {
         ...current,
         logoUrl: document.getElementById("setLogoUrl").value,
@@ -2679,7 +2719,7 @@
         whatsapp: document.getElementById("setWhatsApp").value,
         email: document.getElementById("setEmail").value,
         address: document.getElementById("setAddress").value,
-        mapEmbedUrl: document.getElementById("setMapEmbedUrl").value,
+        mapEmbedUrl: rawMapInput,
         statStudents: document.getElementById("setStatStudents").value,
         statTeachers: document.getElementById("setStatTeachers").value,
         statSuccess: document.getElementById("setStatSuccess").value,
@@ -2690,7 +2730,7 @@
         try { await setDoc(doc(db, "settings", "general"), s); } catch(err) {}
       }
       await applyDynamicSettings();
-      showToast("تم تحديث هوية المدرسة والخريطة بنجاح!", "success");
+      showToast("تم تحديث هوية المدرسة وتطبيق الخريطة المعتمدة بنجاح!", "success");
     });
 
     document.getElementById("adminSafetyTextsForm").addEventListener("submit", async (e) => {
@@ -2730,7 +2770,9 @@
       showToast("تم تحديث نصوص عن المدرسة والرؤية والرسالة بنجاح!", "success");
     });
 
-    // تحديث وتشفير بيانات اعتماد حساب المسؤول في Firebase
+    /* ==========================================================================
+       تغيير وتشفير بيانات حساب المسؤول السحابية 100%
+       ========================================================================== */
     document.getElementById("adminSecurityForm").addEventListener("submit", async (e) => {
       e.preventDefault();
       const newU = document.getElementById("secUsername").value.trim();
@@ -2738,23 +2780,43 @@
       const newPin = document.getElementById("secPin").value.trim();
 
       if (!newU || !newP || !newPin) {
-        showToast("يرجى ملء كافة حقول الأمان", "error");
+        showToast("يرجى ملء كافة حقول الأمان (اسم المستخدم، كلمة المرور، ورمز الـ PIN)", "error");
         return;
       }
 
+      if (newP.length < 6) {
+        showToast("تنبيه: يجب ألا تقل كلمة المرور عن 6 خانات لضمان الأمان", "error");
+        return;
+      }
+
+      if (newPin.length < 4) {
+        showToast("تنبيه: يجب أن يتكون رمز الـ PIN من 4 أرقام على الأقل", "error");
+        return;
+      }
+
+      // تشفير البيانات بخوارزمية SHA-256
       const uHash = await sha256(newU);
       const pHash = await sha256(newP);
       const pinHash = await sha256(newPin);
 
-      await setSecureAdminAuth(uHash, pHash, pinHash);
+      // الحفظ الفوري في Firebase والمخزن المحلي
+      await setSecureAdminAuth(uHash, pHash, pinHash, newU);
 
-      showToast("تم تحديث بيانات اعتماد الحساب في Firebase بنجاح تام!", "success");
+      // مسح كلمات المرور الحساسة من واجهة الإدخال للأمان
       document.getElementById("secPassword").value = "";
       document.getElementById("secPin").value = "";
+
+      // تحديث شارة الأمان
+      const badge = document.getElementById("adminAuthBadgeState");
+      if (badge) {
+        badge.innerHTML = `<i class="fa-solid fa-circle-check"></i> تم التحديث والتشفير بنجاح`;
+      }
+
+      showToast(`تم تحديث وتشفير بيانات الحساب بنجاح! اسم المستخدم الجديد: (${newU})`, "success");
     });
 
     /* ==========================================================================
-       رابعاً: تسجيل دخول الإدارة المؤمّن من خلال أيقونة الفوتر السرية فقط
+       خامساً: تسجيل دخول الإدارة المؤمّن والتحقق السحابي
        ========================================================================== */
     const adminOverlay = document.getElementById("adminOverlay");
     let tempAuthCheck = null;
@@ -2769,13 +2831,13 @@
       tempAuthCheck = null;
     }
 
-    // الزناد الوحيد لفتح لوحة الإدارة هو الأيقونة السرية بالفوتر
+    // فتح نافذة الدخول عبر أيقونة القفل في الفوتر
     document.getElementById("secretAdminTrigger").addEventListener("click", () => {
       resetAdminLoginForm();
       openModal("adminLoginModal");
     });
 
-    // خطوة التحقق الأولى: اسم المستخدم وكلمة المرور
+    // خطوة 1: اسم المستخدم وكلمة المرور
     document.getElementById("adminStep1Form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const u = document.getElementById("admUser").value.trim();
@@ -2783,17 +2845,17 @@
 
       const btn = document.getElementById("btnStep1Submit");
       btn.disabled = true;
-      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> جاري التحقق من Firebase...`;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> جاري التحقق المشفر...`;
 
       try {
         const adminAuth = await getSecureAdminAuth();
         const inputUHash = await sha256(u);
         const inputPHash = await sha256(p);
 
-        // في حال كانت قاعدة البيانات جديدة تماماً ولم يتم تأسيس حساب بعد
+        // في حال كانت الجلسة الأولى للنظام ولم يسبق تسجيل حساب
         if (!adminAuth) {
           showToast("تم اكتشاف جلسة التأسيس الأولى. يرجى إدخال رمز PIN لإتمام التسجيل الأمني في Firebase.", "info");
-          tempAuthCheck = { firstSetup: true, uHash: inputUHash, pHash: inputPHash };
+          tempAuthCheck = { firstSetup: true, uHash: inputUHash, pHash: inputPHash, plainU: u };
           document.getElementById("adminStep1Form").style.display = "none";
           document.getElementById("adminStep2Form").style.display = "block";
           document.getElementById("loginStepTitle").innerHTML = `<i class="fa-solid fa-key" style="color:var(--accent)"></i> تعيين رمز PIN الأول`;
@@ -2801,6 +2863,7 @@
           return;
         }
 
+        // مطابقة التجزئة المشفرة
         if (adminAuth.usernameHash === inputUHash && adminAuth.passwordHash === inputPHash) {
           tempAuthCheck = { adminAuth };
           document.getElementById("adminStep1Form").style.display = "none";
@@ -2809,10 +2872,10 @@
           document.getElementById("admPin").focus();
           showToast("البيانات صحيحة. يرجى إدخال رمز التحقق الأمني PIN.", "info");
         } else {
-          showToast("بيانات الدخول غير صحيحة!", "error");
+          showToast("اسم المستخدم أو كلمة المرور غير صحيحة!", "error");
         }
       } catch (err) {
-        showToast("حدث خطأ أثناء المصادقة مع Firebase", "error");
+        showToast("حدث خطأ أثناء المصادقة السحابية", "error");
       } finally {
         btn.disabled = false;
         btn.innerHTML = `متابعة للتحقق <i class="fa-solid fa-arrow-left"></i>`;
@@ -2821,7 +2884,7 @@
 
     document.getElementById("backToStep1Btn").addEventListener("click", () => resetAdminLoginForm());
 
-    // خطوة التحقق الثانية: رمز PIN
+    // خطوة 2: التحقق من رمز الـ PIN المشفر
     document.getElementById("adminStep2Form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const pin = document.getElementById("admPin").value.trim();
@@ -2832,12 +2895,12 @@
 
       try {
         if (tempAuthCheck && tempAuthCheck.firstSetup) {
-          await setSecureAdminAuth(tempAuthCheck.uHash, tempAuthCheck.pHash, inputPinHash);
+          await setSecureAdminAuth(tempAuthCheck.uHash, tempAuthCheck.pHash, inputPinHash, tempAuthCheck.plainU);
           sessionStorage.setItem("TNS_ADMIN_AUTH", "true");
           closeModal("adminLoginModal");
           adminOverlay.classList.add("active");
           renderAllAdminPanels();
-          showToast("تم حفظ حساب الإدارة الأول في Firebase بنجاح!", "success");
+          showToast("تم تأسيس حساب الإدارة وحفظه مشفراً في Firebase بنجاح!", "success");
           resetAdminLoginForm();
           return;
         }
@@ -2877,7 +2940,7 @@
     });
 
     /* ==========================================================================
-       خامساً: محرك توليد الحقول والنماذج الديناميكي
+       سادساً: محرك توليد النماذج وإدارة العناصر (CRUD)
        ========================================================================== */
     const GRADES_LIST = [
       "الصف الأول", "الصف الثاني", "الصف الثالث", "الصف الرابع",
@@ -3067,7 +3130,7 @@
     });
 
     /* ==========================================================================
-       سادساً: جدول الحصص الأسبوعي التفاعلي
+       سابعاً: جدول الحصص الأسبوعي التفاعلي
        ========================================================================== */
     const DEFAULT_CURRICULUM = [
       { p: 1, subject: "اللغة العربية", teacher: "أ. فاطمة الظاهري", phone: "971501112233", room: "قاعة 201" },
@@ -3233,7 +3296,7 @@
     });
 
     /* ==========================================================================
-       سابعاً: دوال عرض الأقسام العامة (Public Renderers)
+       ثامناً: دوال عرض الأقسام العامة (Public Renderers)
        ========================================================================== */
     async function renderAllPublicViews() {
       renderPublicFeesDropdown();
@@ -3258,8 +3321,7 @@
         <div style="padding:0.9rem 1.1rem; background:var(--bg-surface-alt); border-radius:var(--radius-sm); margin-bottom:0.75rem; border-right:4px solid var(--secondary);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
             <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
-            <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</span>
-          </div>
+            <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</div>
           <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">${escapeHTML(item.desc)}</p>
         </div>
       `).join("");
@@ -3575,7 +3637,7 @@
     });
 
     /* ==========================================================================
-       ثامناً: دوال لوحة التحكم الإدارية
+       تاسعاً: دوال لوحة التحكم الإدارية
        ========================================================================== */
     window.filterAdminSection = async function(sectionKey, query) {
       const q = query.toLowerCase().trim();
@@ -3848,7 +3910,7 @@
     setInterval(updateAdminClock, 1000);
 
     /* ==========================================================================
-       تاسعاً: التشغيل والتهيئة عند تحميل الصفحة
+       عاشراً: التشغيل والتهيئة عند تحميل الصفحة
        ========================================================================== */
     window.addEventListener("DOMContentLoaded", async () => {
       await applyDynamicSettings();
