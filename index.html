@@ -567,6 +567,30 @@
       transform: scale(1.03);
     }
 
+    .day-view-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .day-view-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .day-view-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+    .day-slot-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border-right: 4px solid var(--secondary);
+      box-shadow: var(--shadow-sm);
+    }
+
     /* خريطة المدرسة */
     .school-map-wrapper {
       margin-top: 2rem;
@@ -1237,7 +1261,7 @@
         <div class="section-title-wrap">
           <div class="badge-sub"><i class="fa-solid fa-calendar-week"></i> الجداول الدراسية التفاعلية</div>
           <h2 class="section-title">جدول الحصص الأسبوعي لأولياء الأمور والطلبة</h2>
-          <p class="section-subtitle">حدد الصف الدراسي والشعبة لعرض جدول الحصص الأسبوعي الكامل من الإثنين إلى الجمعة، مع إمكانية التواصل المباشر مع معلم المادة عبر واتساب.</p>
+          <p class="section-subtitle">حدد الصف الدراسي والشعبة لعرض جدول الحصص المعتمد من الإدارة المدرسية من الإثنين إلى الجمعة، مع إمكانية التواصل المباشر مع معلم المادة عبر واتساب.</p>
         </div>
 
         <div class="timetable-controls-box">
@@ -1291,7 +1315,7 @@
 
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:1.2rem; padding-top:1rem; border-top:1px dashed var(--border);">
             <div style="font-size:0.85rem; color:var(--text-muted);">
-              <i class="fa-solid fa-circle-info" style="color:var(--info);"></i> انقر على زر <span style="color:#25d366; font-weight:800;"><i class="fa-brands fa-whatsapp"></i> واتساب المعلم</span> في أي حصة لفتح محادثة استفسار فورية.
+              <i class="fa-solid fa-circle-info" style="color:var(--info);"></i> انقر على زر <span style="color:#25d366; font-weight:800;"><i class="fa-brands fa-whatsapp"></i> واتساب المعلم</span> في أي حصة مدخلة لفتح محادثة استفسار فورية.
             </div>
             <div style="display:flex; gap:8px;">
               <button class="btn btn-secondary btn-sm" id="ttRefreshBtn"><i class="fa-solid fa-arrows-rotate"></i> تحديث الجدول</button>
@@ -1502,7 +1526,7 @@
           </div>
         </div>
 
-        <!-- خريطة المدرسة التفاعلية المدمجة والشاملة والمؤمنة ضد الحظر -->
+        <!-- خريطة المدرسة التفاعلية المدمجة -->
         <div class="school-map-wrapper">
           <iframe id="schoolGoogleMapFrame" src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="map-action-bar">
@@ -1518,7 +1542,7 @@
     </section>
   </main>
 
-  <!-- الفوتر مع أيقونة القفل السرية التقديرية للإدارة -->
+  <!-- الفوتر -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1552,7 +1576,6 @@
       </div>
       <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:1rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; font-size:0.8rem;">
         <p>© 2026 مدرسة الثروات الوطنية الخاصة – TNS. جميع الحقوق محفوظة ومحمية برمجياً.</p>
-        <!-- أيقونة الدخول الإداري السرية غير الملفتة للنظر -->
         <button class="secret-admin-trigger" id="secretAdminTrigger" title="إدارة النظام">
           <i class="fa-solid fa-lock"></i>
         </button>
@@ -1579,7 +1602,7 @@
     </div>
   </div>
 
-  <!-- 2. تسجيل دخول الأدمن المشفر المعتمد 100% على Firebase -->
+  <!-- 2. تسجيل دخول الأدمن المشفر المعتمد -->
   <div class="modal-backdrop" id="adminLoginModal">
     <div class="modal-content" style="max-width:420px;">
       <div class="modal-header">
@@ -1589,7 +1612,7 @@
         <button class="icon-btn" onclick="closeModal('adminLoginModal')"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <!-- الخطوة 1: اسم المستخدم وكلمة المرور -->
+      <!-- الخطوة 1 -->
       <form id="adminStep1Form">
         <div class="modal-body">
           <div class="form-group">
@@ -1610,7 +1633,7 @@
         </div>
       </form>
 
-      <!-- الخطوة 2: رمز PIN السري -->
+      <!-- الخطوة 2 -->
       <form id="adminStep2Form" style="display:none;">
         <div class="modal-body">
           <div style="background:rgba(2, 134, 83, 0.1); border:1px solid var(--accent); border-radius:var(--radius-sm); padding:0.65rem; margin-bottom:0.75rem;">
@@ -1743,7 +1766,7 @@
     </div>
   </div>
 
-  <!-- 6. النافذة التحذيرية المخصصة لتأكيد الحذف -->
+  <!-- 6. نافذة تأكيد الحذف -->
   <div class="modal-backdrop" id="customConfirmModal">
     <div class="modal-content" style="max-width:420px; text-align:center;">
       <div class="modal-body" style="padding:2rem 1.5rem 1.25rem;">
@@ -1888,7 +1911,7 @@
           </div>
         </div>
 
-        <!-- 1. إعدادات الهوية والخريطة والأمان عبر Firebase -->
+        <!-- 1. إعدادات الهوية والخريطة والأمان -->
         <div id="tabSettings" class="adm-pane" style="display:none;">
           <h2 style="font-size:1.25rem; font-weight:900; margin-bottom:0.75rem; color:var(--primary);">إعدادات الهوية والخريطة وقاعدة بيانات Firebase</h2>
           
@@ -1930,10 +1953,10 @@
                 <i class="fa-solid fa-map-location-dot"></i> موقع وخريطة المدرسة التفاعلية
               </h4>
               <div class="form-group">
-                <label class="form-label">رابط الخريطة المعتمد (يدعم رابط خرائط جوجل المباشر أو كود التضمين Embed):</label>
+                <label class="form-label">رابط الخريطة المعتمد:</label>
                 <input type="text" class="form-control" id="setMapEmbedUrl" required placeholder="https://maps.app.goo.gl/z4nsijTVAZJfxnPb8" />
                 <span style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">
-                  <i class="fa-solid fa-circle-check" style="color:var(--accent);"></i> النظام مزود بمحوّل تلقائي يعالج الروابط المختصرة (maps.app.goo.gl) وروابط المشاركة لتظهر داخل الخريطة التفاعلية بدون أي حظر أو خطأ.
+                  <i class="fa-solid fa-circle-check" style="color:var(--accent);"></i> النظام مزود بمحوّل تلقائي يعالج الروابط المختصرة وروابط المشاركة لتظهر داخل الخريطة التفاعلية بدون أي حظر أو خطأ.
                 </span>
               </div>
 
@@ -2021,7 +2044,7 @@
           </div>
         </div>
 
-        <!-- 2. إدارة قسم الأمن والسلامة والتعميمات الإرشادية -->
+        <!-- 2. إدارة قسم الأمن والسلامة والتعميمات -->
         <div id="tabSafetyAdmin" class="adm-pane" style="display:none;">
           <div class="admin-header-strip">
             <div>
@@ -2105,7 +2128,7 @@
           <div id="admAcademicsList"></div>
         </div>
 
-        <!-- 5. الرسوم الدراسية (المسار المتقدم فقط) -->
+        <!-- 5. الرسوم الدراسية -->
         <div id="tabFees" class="adm-pane" style="display:none;">
           <div class="admin-header-strip">
             <div class="admin-search-bar">
@@ -2244,7 +2267,6 @@
 
     window.addEventListener("dragstart", (e) => e.preventDefault());
 
-    // تنظيف النصوص لمنع هجمات XSS
     function escapeHTML(str) {
       if (!str) return "";
       return String(str)
@@ -2263,7 +2285,7 @@
     }
 
     /* ==========================================================================
-       ثانياً: معالج ومحول روابط خرائط جوجل لضمان العرض 100% بدون أي حظر
+       ثانياً: معالج ومحول روابط خرائط جوجل
        ========================================================================== */
     function convertToEmbedMapUrl(inputUrl) {
       if (!inputUrl) {
@@ -2272,18 +2294,15 @@
 
       let url = String(inputUrl).trim();
 
-      // إذا أدخل المسؤول كود iframe كامل، نستخرج الرابط فقط
       const iframeMatch = url.match(/src=["']([^"']+)["']/i);
       if (iframeMatch) {
         url = iframeMatch[1];
       }
 
-      // إذا كان الرابط هو رابط المشاركة المختصر المقدم للمدرسة أو أي رابط maps.app.goo.gl
       if (url.includes("maps.app.goo.gl") || url.includes("goo.gl/maps") || url.includes("z4nsijTVAZJfxnPb8")) {
         return "https://maps.google.com/maps?q=Al+Tharawat+National+Private+School+Baniyas+East+Abu+Dhabi&t=&z=16&ie=UTF8&iwloc=&output=embed";
       }
 
-      // إذا كان رابط Google Maps عام ولا يحتوي على output=embed
       if (url.includes("google.com/maps") && !url.includes("embed") && !url.includes("output=embed")) {
         return "https://maps.google.com/maps?q=Al+Tharawat+National+Private+School+Baniyas+East+Abu+Dhabi&t=&z=16&ie=UTF8&iwloc=&output=embed";
       }
@@ -2330,7 +2349,7 @@
       console.warn("تنبيه: قاعدة البيانات بانتظار إدخال مفاتيح Firebase الخاصة بمشروعكم.");
     }
 
-    /* المخزن العام الافتراضي */
+    /* المخزن العام الافتراضي (مصفوفة الحصص فارغة تماماً لتعتمد على إدخال لوحة التحكم فقط) */
     const INITIAL_STORE = {
       settings: {
         logoUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=200&auto=format&fit=crop",
@@ -2385,11 +2404,7 @@
         { id: "saf2", title: "إرشادات السلامة المرورية والسرعة أمام الحرم المدرسي", date: "2026-02-15", desc: "يرجى من السادة أولياء الأمور عدم التوقف المزدوج نهائياً، والالتزام بمسار النزول المحدد حفاظاً على أرواح أبنائنا، والالتزام بالسرعة 20 كم/ساعة." },
         { id: "saf3", title: "خطة التعامل مع الضباب وتقلبات الطقس المعتمدة", date: "2026-01-20", desc: "في حال إصدار المركز الوطني للأرصاد تنبيهاً بالضباب الكثيف أو الأمطار الغزيرة، يُرجى متابعة الرسائل النصية القصيرة لاعتماد آلية التعلم الذكي عن بعد." }
       ],
-      schedules: [
-        { id: "sch_1", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 1, period: "الحصة 1", time: "08:00 - 08:45", subject: "اللغة العربية", teacher: "أ. فاطمة الظاهري", teacherPhone: "971501112233", room: "قاعة 201" },
-        { id: "sch_2", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 2, period: "الحصة 2", time: "08:50 - 09:35", subject: "الرياضيات المتقدمة", teacher: "أ. عبد الله المهيري", teacherPhone: "971502223344", room: "قاعة 201" },
-        { id: "sch_3", grade: "الصف التاسع (متقدم)", section: "1", day: "الإثنين", periodIndex: 3, period: "الحصة 3", time: "09:40 - 10:25", subject: "الفيزياء المتقدمة", teacher: "د. خالد السعدي", teacherPhone: "971504445566", room: "المختبر العلمي" }
-      ],
+      schedules: [], // لا يوجد حصص وهمية - يتم الاعتماد كلياً على الإدخال من لوحة التحكم
       transport: [
         { id: "tr1", zone: "بني ياس (شرق وغرب)", busNo: "حافلة 01 و 02", supervisor: "أ. أمينة الكعبي (0501112233)", time: "الصباح: 06:45 ص | الظهيرة: 02:15 م" },
         { id: "tr2", zone: "الشامخة والشوامخ", busNo: "حافلة 03 و 04", supervisor: "أ. نورة المنصوري (0502223344)", time: "الصباح: 06:40 ص | الظهيرة: 02:20 م" },
@@ -2585,7 +2600,6 @@
           console.warn("تعذر استرجاع بيانات الأمان من Firebase، سيتم الرجوع للمخزن الآمن:", e);
         }
       }
-      // تخزين احتياطي مشفر في LocalStorage للجلسات غير المتصلة
       const localSecure = localStorage.getItem("TNS_SEC_AUTH");
       if (localSecure) {
         try { return JSON.parse(localSecure); } catch(e) {}
@@ -2598,7 +2612,7 @@
         usernameHash,
         passwordHash: passHash,
         pinHash,
-        lastUsername: plainUsername, // اسم المستخدم للعرض الإداري الآمن فقط
+        lastUsername: plainUsername,
         updatedAt: new Date().toISOString()
       };
 
@@ -2642,12 +2656,10 @@
       document.getElementById("contactEmail").textContent = s.email;
       document.getElementById("contactAddress").textContent = s.address;
 
-      // تطبيق وعرض الخريطة الآمنة بدون أي مشاكل
       const finalMapUrl = convertToEmbedMapUrl(s.mapEmbedUrl);
       document.getElementById("schoolGoogleMapFrame").src = finalMapUrl;
       document.getElementById("setMapEmbedUrl").value = s.mapEmbedUrl || "https://maps.app.goo.gl/z4nsijTVAZJfxnPb8";
 
-      // تحديث رابط الخريطة المباشر في البطاقة
       const directMapLink = document.getElementById("schoolMapDirectLink");
       if (directMapLink) {
         directMapLink.href = s.mapEmbedUrl && s.mapEmbedUrl.startsWith("http") ? s.mapEmbedUrl : "https://maps.app.goo.gl/z4nsijTVAZJfxnPb8";
@@ -2695,7 +2707,6 @@
       document.getElementById("setSafetyTitle").value = s.safetyTitle || "";
       document.getElementById("setSafetyDesc").value = s.safetyDesc || "";
 
-      // استعراض اسم المستخدم الحالي في حقل الأمان إن وجد
       const adminAuth = await getSecureAdminAuth();
       if (adminAuth && adminAuth.lastUsername) {
         document.getElementById("secUsername").value = adminAuth.lastUsername;
@@ -2794,19 +2805,15 @@
         return;
       }
 
-      // تشفير البيانات بخوارزمية SHA-256
       const uHash = await sha256(newU);
       const pHash = await sha256(newP);
       const pinHash = await sha256(newPin);
 
-      // الحفظ الفوري في Firebase والمخزن المحلي
       await setSecureAdminAuth(uHash, pHash, pinHash, newU);
 
-      // مسح كلمات المرور الحساسة من واجهة الإدخال للأمان
       document.getElementById("secPassword").value = "";
       document.getElementById("secPin").value = "";
 
-      // تحديث شارة الأمان
       const badge = document.getElementById("adminAuthBadgeState");
       if (badge) {
         badge.innerHTML = `<i class="fa-solid fa-circle-check"></i> تم التحديث والتشفير بنجاح`;
@@ -2831,13 +2838,11 @@
       tempAuthCheck = null;
     }
 
-    // فتح نافذة الدخول عبر أيقونة القفل في الفوتر
     document.getElementById("secretAdminTrigger").addEventListener("click", () => {
       resetAdminLoginForm();
       openModal("adminLoginModal");
     });
 
-    // خطوة 1: اسم المستخدم وكلمة المرور
     document.getElementById("adminStep1Form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const u = document.getElementById("admUser").value.trim();
@@ -2852,7 +2857,6 @@
         const inputUHash = await sha256(u);
         const inputPHash = await sha256(p);
 
-        // في حال كانت الجلسة الأولى للنظام ولم يسبق تسجيل حساب
         if (!adminAuth) {
           showToast("تم اكتشاف جلسة التأسيس الأولى. يرجى إدخال رمز PIN لإتمام التسجيل الأمني في Firebase.", "info");
           tempAuthCheck = { firstSetup: true, uHash: inputUHash, pHash: inputPHash, plainU: u };
@@ -2863,7 +2867,6 @@
           return;
         }
 
-        // مطابقة التجزئة المشفرة
         if (adminAuth.usernameHash === inputUHash && adminAuth.passwordHash === inputPHash) {
           tempAuthCheck = { adminAuth };
           document.getElementById("adminStep1Form").style.display = "none";
@@ -2884,7 +2887,6 @@
 
     document.getElementById("backToStep1Btn").addEventListener("click", () => resetAdminLoginForm());
 
-    // خطوة 2: التحقق من رمز الـ PIN المشفر
     document.getElementById("adminStep2Form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const pin = document.getElementById("admPin").value.trim();
@@ -3130,55 +3132,16 @@
     });
 
     /* ==========================================================================
-       سابعاً: جدول الحصص الأسبوعي التفاعلي
+       سابعاً: جدول الحصص الأسبوعي التفاعلي (يعتمد فقط وحصرياً على المدخلات من لوحة التحكم)
        ========================================================================== */
-    const DEFAULT_CURRICULUM = [
-      { p: 1, subject: "اللغة العربية", teacher: "أ. فاطمة الظاهري", phone: "971501112233", room: "قاعة 201" },
-      { p: 2, subject: "الرياضيات المتقدمة", teacher: "أ. عبد الله المهيري", phone: "971502223344", room: "قاعة 201" },
-      { p: 3, subject: "اللغة الإنجليزية المتقدمة", teacher: "أ. سارة الحمادي", phone: "971503334455", room: "مختبر اللغات" },
-      { p: 4, subject: "الفيزياء المتقدمة", teacher: "د. خالد السعدي", phone: "971504445566", room: "المختبر العلمي" },
-      { p: 5, subject: "التربية الإسلامية", teacher: "أ. محمد الكعبي", phone: "971505556677", room: "قاعة 201" },
-      { p: 6, subject: "الدراسات الاجتماعية", teacher: "أ. مريم المنصوري", phone: "971506667788", room: "قاعة 201" },
-      { p: 7, subject: "الحوسبة والذكاء الاصطناعي", teacher: "م. أحمد الشامسي", phone: "971507778899", room: "مختبر الحاسوب" }
-    ];
-
     async function getFullTimetableFor(grade, section) {
       const dbSchedules = await loadData("schedules");
-      const matched = dbSchedules.filter(s => s.grade === grade && String(s.section) === String(section));
+      // تصفية واستخراج البيانات المدخلة فقط من لوحة التحكم الخاصة بالصف والشعبة المحددين
+      const matched = (Array.isArray(dbSchedules) ? dbSchedules : []).filter(
+        s => s.grade === grade && String(s.section) === String(section)
+      );
 
-      const fullSchedule = [];
-      DAYS_LIST.forEach((day, dIdx) => {
-        PERIODS_LIST.forEach((pObj, pIdx) => {
-          const pNum = pIdx + 1;
-          const found = matched.find(m => m.day === day && (Number(m.periodIndex) === pNum || m.period === pObj.name));
-          
-          if (found) {
-            fullSchedule.push({
-              ...found,
-              period: pObj.name,
-              time: found.time || pObj.time
-            });
-          } else {
-            const rotIdx = (pIdx + dIdx) % DEFAULT_CURRICULUM.length;
-            const def = DEFAULT_CURRICULUM[rotIdx];
-            fullSchedule.push({
-              id: `gen_${grade}_${section}_${day}_${pNum}`,
-              grade,
-              section,
-              day,
-              periodIndex: pNum,
-              period: pObj.name,
-              time: pObj.time,
-              subject: def.subject,
-              teacher: def.teacher,
-              teacherPhone: def.phone,
-              room: def.room
-            });
-          }
-        });
-      });
-
-      return fullSchedule;
+      return matched;
     }
 
     async function renderPublicTimetable() {
@@ -3189,6 +3152,7 @@
 
       document.getElementById("ttCurrentHeading").textContent = `${grade} — شعبة (${section})`;
 
+      // جلب الحصص المدخلة فعلياً فقط من لوحة التحكم
       const scheduleData = await getFullTimetableFor(grade, section);
 
       if (dayOption === "week") {
@@ -3237,7 +3201,7 @@
                 </td>
               `;
             } else {
-              tableHtml += `<td><span style="color:var(--text-muted); font-size:0.8rem;">—</span></td>`;
+              tableHtml += `<td style="text-align:center; vertical-align:middle;"><span style="color:var(--text-muted); font-size:0.85rem; font-weight:700;">—</span></td>`;
             }
           });
 
@@ -3255,35 +3219,45 @@
       } else {
         const daySlots = scheduleData.filter(s => s.day === dayOption);
         
-        container.innerHTML = `
-          <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; margin-bottom:1rem;">
-            <strong style="color:var(--secondary); font-size:1.05rem;"><i class="fa-solid fa-calendar-check"></i> حصص يوم ${dayOption}:</strong>
-          </div>
-          <div class="day-view-cards">
-            ${daySlots.map(slot => {
-              const cleanPhone = (slot.teacherPhone || "971501234567").replace(/[^0-9]/g, '');
-              const waMsg = encodeURIComponent(`السلام عليكم أستاذ(ة) ${slot.teacher}، أنا ولي أمر طالب في ${slot.grade} (شعبة ${slot.section}) بخصوص مادة ${slot.subject}.`);
-              return `
-                <div class="day-slot-box">
-                  <div>
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                      <span class="badge-sub" style="margin:0; font-size:0.75rem;">${slot.period}</span>
-                      <span style="font-size:0.78rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${slot.time}</span>
+        if (daySlots.length === 0) {
+          container.innerHTML = `
+            <div style="background:var(--bg-surface); border:1px dashed var(--border); border-radius:var(--radius-md); padding:2.5rem 1rem; text-align:center;">
+              <i class="fa-regular fa-calendar-xmark" style="font-size:2.5rem; color:var(--text-muted); margin-bottom:0.75rem;"></i>
+              <h4 style="font-size:1.1rem; color:var(--primary); margin-bottom:0.3rem;">لا توجد حصص مضافة ليوم (${dayOption})</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">لم يتم إدخال حصص لهذا اليوم من قِبل إدارة المدرسة بعد.</p>
+            </div>
+          `;
+        } else {
+          container.innerHTML = `
+            <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; margin-bottom:1rem;">
+              <strong style="color:var(--secondary); font-size:1.05rem;"><i class="fa-solid fa-calendar-check"></i> حصص يوم ${dayOption}:</strong>
+            </div>
+            <div class="day-view-cards">
+              ${daySlots.map(slot => {
+                const cleanPhone = (slot.teacherPhone || "971501234567").replace(/[^0-9]/g, '');
+                const waMsg = encodeURIComponent(`السلام عليكم أستاذ(ة) ${slot.teacher}، أنا ولي أمر طالب في ${slot.grade} (شعبة ${slot.section}) بخصوص مادة ${slot.subject}.`);
+                return `
+                  <div class="day-slot-box">
+                    <div>
+                      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                        <span class="badge-sub" style="margin:0; font-size:0.75rem;">${slot.period || ('الحصة ' + slot.periodIndex)}</span>
+                        <span style="font-size:0.78rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${slot.time}</span>
+                      </div>
+                      <h3 style="font-size:1.1rem; color:var(--primary); font-weight:800; margin-bottom:4px;">${escapeHTML(slot.subject)}</h3>
+                      <p style="font-size:0.85rem; color:var(--text-main); margin-bottom:3px;"><strong>المعلم:</strong> ${escapeHTML(slot.teacher)}</p>
+                      <p style="font-size:0.8rem; color:var(--text-muted);"><strong>القاعة:</strong> ${escapeHTML(slot.room || 'قاعة الصف')}</p>
                     </div>
-                    <h3 style="font-size:1.1rem; color:var(--primary); font-weight:800; margin-bottom:4px;">${escapeHTML(slot.subject)}</h3>
-                    <p style="font-size:0.85rem; color:var(--text-main); margin-bottom:3px;"><strong>المعلم:</strong> ${escapeHTML(slot.teacher)}</p>
-                    <p style="font-size:0.8rem; color:var(--text-muted);"><strong>القاعة:</strong> ${escapeHTML(slot.room || 'قاعة الصف')}</p>
+                    <div>
+                      <a href="https://wa.me/${cleanPhone}?text=${waMsg}" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">
+                        <i class="fa-brands fa-whatsapp"></i> تواصل مع المعلم عبر واتساب
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <a href="https://wa.me/${cleanPhone}?text=${waMsg}" target="_blank" class="btn btn-whatsapp btn-sm" style="width:100%;">
-                      <i class="fa-brands fa-whatsapp"></i> تواصل مع المعلم عبر واتساب
-                    </a>
-                  </div>
-                </div>
-              `;
-            }).join("")}
-          </div>
-        `;
+                `;
+              }).join("")}
+            </div>
+          `;
+        }
       }
     }
 
@@ -3321,7 +3295,8 @@
         <div style="padding:0.9rem 1.1rem; background:var(--bg-surface-alt); border-radius:var(--radius-sm); margin-bottom:0.75rem; border-right:4px solid var(--secondary);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
             <strong style="color:var(--primary); font-size:0.95rem;">${escapeHTML(item.title)}</strong>
-            <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</div>
+            <span style="font-size:0.75rem; color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${escapeHTML(item.date)}</span>
+          </div>
           <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">${escapeHTML(item.desc)}</p>
         </div>
       `).join("");
